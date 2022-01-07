@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 사람의 발견</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined"
+ rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" >
+    <link rel="stylesheet" type="text/css" href="../css/common.css" >
+
+    <link rel="stylesheet" type="text/css" href="../css/mobile.css" >
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1024px)" href="../css/tab.css" >
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1025px)" href="../css/pc.css" >
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+        <!-- 공유 팝업 -->
+        <div class="modal mo-share">
+            <div class="modal-body">
+                <div class="contentBox">
+                    <button class="share-close"><span class="material-icons-outlined">close</span></button>
+                    <h4 class="share-title">공유하기</h4>
+                    <ul class="shareIcon">
+                        <li>
+                            <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_naver.png" alt="네이버 블로그"></a></div>
+                            <span>네이버 블로그</span>
+                        </li>
+                        <li>
+                            <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_facebook.png" alt="페이스북"></a></div>
+                            <span>페이스북</span>
+                        </li>
+                        <li>
+                            <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_kakao.png" alt="카카오톡"></a></div>
+                            <span>카카오톡</span>
+                        </li>
+                    </ul>
+                    <div class="share-link">
+                        <input type="text" class="int" id="share-text" value=" www.saram.career4u.net">
+                        <button type="button" class="btn btn-copy">복사</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <!-- 헤더 -->
+    <header id="gnbNav">
+        <div class="container">
+            <nav class="gnbBox">
+                <div class="menu"><span></span><span></span><span></span></div>
+                <div class="snsBox">
+                    <div>
+                        <div><a href="http://www.youtube.com/assestashare" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_01.png" alt="유튜브"></a></div>
+                        <div><a href="http://www.istagram.com/assesta_official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_02.png" alt="인스타그램"></a></div>
+                        <div><a href="http://www.facebook.com/assesta.official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_03.png" alt="페이스북"></a></div>
+                        <div><a href="http://pf.kakao.com/_Wfxnqs" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_04.png" alt="카카오톡"></a></div>
+                    </div>
+                </div>
+                <div class="logo"><div><img src="http://img.assesta.com/AssestaExam/mbtifront/logo.gif" alt="사람의발견 로고"></div></div>
+                <!-- 로그인 전 버튼 -->
+                <div class="test"><button type="button" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
+                <!-- 로그인 후 버튼 -->
+                <!-- <div class="goMy"><button type="button" class="btn-my"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_mygo.png" alt="사람 아이콘"></button></div> -->
+
+            </nav>
+        </div>
+        <div class="dim-area">
+            <div class="sideBox">
+                <button type="button" class=" btn-close menu-close"><span></span></button>
+                <div class="sidebar">
+                    <!-- 로그인 전 상태 -->
+                    <div class="side-user userLogout" style="display: none;">
+                        <p>로그인이 필요합니다.</p>
+                    </div>
+                    <!-- 로그인 후 나타나게 해주세요 -->
+                    <!-- 로그인 후 상태 -->
+                    <div class="side-user userLogin">
+                        <p>홍길동 님 반가워요</p>
+                        <a>마이페이지 보러 가기</a>
+                    </div>
+
+                    <ul class="largeMenu">
+                        <li>
+                            <a href="#">About</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">MBTI 사람의 발견 소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Service</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">자기의 발견 1</a></li>
+                                <!-- <li><a href="#">자기의 발견 2</a></li> -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Contents</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">연구자료</a></li>
+                                <li><a href="#">영상모음. ZIP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Communication</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">Q&A</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 로그인 후 나타나게 해주세요 -->
+                    <button type="button" class="btn btn-logout">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    
+    </header>
+    <!-- content -->
+    <section class="product">
+        <div class="container">
+            <div class="serviceBox">
+                <div class="prd-MBTI">
+                    <div class="mbtiImg">
+                        <div><a href="#"><img src="" alt="imgArea"></a></div>
+                        <!-- <div>                                
+                            <span class="hot">HOT</span>
+                            <span class="new">NEW</span>
+                        </div> -->
+                    </div>
+                    <div class="mbtiName">
+                        <p>자기의 발견 1 <span style="display: none;">(<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> 1,123)</span></p>
+                        <p>25,000원<span style="display: none;">최종 결제 금액의 1% 적립</span></p>
+                        <!-- <span class="share"><button><img src="http://img.assesta.com/AssestaExam/mbtifront/share.png" alt="공유버튼"></button></span>
+                        <span class="wish"><img src="http://img.assesta.com/AssestaExam/mbtifront/img_wish_off.png"></span> -->
+                    </div>
+                </div>
+                <!-- <div class="mbtiTab">
+                    <ul>
+                        <li class="prdTab tab-on"><a>상세정보</a><i></i></li>
+                        <li class="prdTab"><a>리뷰</a><i></i></li>
+                        <li class="prdTab"><a>문의</a><i></i></li>
+                    </ul>
+                </div> -->
+                <div class="mbtiTabBox details-tab tab-on">
+                    <div class=imgArea>
+                        <div><img src="" alt="imgArea"></div>
+                    </div>
+                    <h2>이는 듣기만 하여도 가슴이 설레는 말이다 청춘!</h2>
+                    <div class="mbti-text">
+                        <p>거선의 기관과 같이 힘있다 이것이다 인류의 역사를 꾸며 내려온 동력은 바로 이것이다 이성은 투명하되 얼음과 같으며 지혜는 날카로우나 갑 속에 든 칼이다 청춘의 끓는 피가 아니더면 인간이 얼마나 쓸쓸하랴?거선의 기관과 같이 힘있다 이것이다 인류의 역사를 꾸며 내려온 동력은 바로 이것이다 이성은 투명하되 얼음과 같으며 지혜는 날카로우나 갑 속에 든 칼이다 청춘의 끓는 피가 아니더면 인간이 얼마나 쓸쓸하랴?</p>
+                        <button type="button" class="btn btn-more">상세 정보 펼쳐보기</button>
+                    </div>
+                    <!-- <div class="recommend">
+                        <h2>추천 상품</h2>
+                        <ul>
+                            <li class="recdList">
+                                <div class="recdImg"><a href="STEP1.html"><img src="" alt="imgArea"></a></div>
+                                <p class="recdName"><a href="STEP1.html">자기의 발견 1<span>25,000원</span></a></p>
+                            </li>
+                            <li class="recdList">
+                                <div class="recdImg"><a><img src="" alt="imgArea"></a></div>
+                                <p class="recdName"><a>자기의 발견 1<span>25,000원</span></a></p>
+                            </li>
+                            <li class="recdList">
+                                <div class="recdImg"><a><img src="" alt="imgArea"></a></div>
+                                <p class="recdName"><a>자기의 발견 1<span>25,000원</span></a></p>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+                <div class="mbtiTabBox review-tab">
+                    <div class="score">
+                        <h2>5.0</h2>
+                        <p><span>(1,123)</span></p>
+                        <div class="starPoint"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    </div>
+                    <div class="reveiw-write">
+                        <div class="point">
+                            <p>포토리뷰 <span>500P</span></p>
+                            <p>일반리뷰 <span>100P</span></p>
+                        </div>
+                    </div>
+                    <div class="sorting-area">
+                        <ul>
+                            <li class="sort-list active"><a>최신순<span class="material-icons-outlined">expand_more</span></a></li>
+                            <li class="sort-list"><a>별점 높은 순<span class="material-icons-outlined">expand_more</span></a></li>
+                            <li class="sort-list"><a>별점 낮은 순<span class="material-icons-outlined">expand_more</span></a></li>
+                            <li class="sort-list"><a>사진 리뷰 <span class="material-icons-outlined">add</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="review-area">
+                        <ul>
+                            <li class="review-list photo-List">
+                                <div>
+                                    <p class="review-txt">
+                                        <img alt="사진" align="left"  hspace="10" vspace="10" class="photo"><span class="user-name">홍길동</span><span class="user-star">★★★★★</span><span class="user-btnGro">[<button class="user-corrBtn">수정</button><span></span><button class="user-delBtn">삭제</button>]</span><span class="user-prd">자기의 발견 1</span><span class="user-time">2021.08.31</span><span class="review-text">만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족</span>
+                                        <span class="more">더보기</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="review-list text-List">
+                                <div>
+                                    <p class="review-txt">
+                                        <span class="user-name">홍길동</span><span class="user-star">★★★★★</span><span class="user-btnGro">[<button class="user-corrBtn">수정</button><span></span><button class="user-delBtn">삭제</button>]</span><span class="user-prd">자기의 발견 1</span><span class="user-time">2021.08.31</span><span class="review-text">만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족</span>
+                                        <span class="more">더보기</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="review-list text-List">
+                                <div>
+                                    <p class="review-txt">
+                                        <span class="user-name">홍길동</span><span class="user-star">★★★★★</span><span class="user-prd">자기의 발견 1</span><span class="user-time">2021.08.31</span><span class="review-text">만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족</span>
+                                        <span class="more">더보기</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="review-list photo-List">
+                                <div>
+                                    <p class="review-txt">
+                                        <img alt="사진" align="left"  hspace="10" vspace="10" class="photo"><span class="user-name">홍길동</span><span class="user-star">★★★★★</span><span class="user-prd">자기의 발견 1</span><span class="user-time">2021.08.31</span><span class="review-text">만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족만족합니만족만족합니다만족
+                                        만족만족합니다 만족만족만족</span>
+                                        <span class="more">더보기</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pagination">
+                        <div>
+                            <span class="pagePrev"><span class="material-icons-outlined">chevron_left</span></span>
+                            <span class="pageNum active">1</span>
+                            <span class="pageNum">2</span>
+                            <span class="pageNum">3</span>
+                            <span class="pageNum">4</span>
+                            <span class="pageNum">5</span>
+                            <span class="pageNum">6</span>
+                            <span class="pageNext"><span class="material-icons-outlined">chevron_right</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mbtiTabBox inquiry-tab">
+                    <div class="inquiry">
+                        <h2>문의</h2>
+                        <p><span>(2,100)</span></p>
+                    </div>
+                    <div class="inquiry-write">
+                        <div class="myInqu">
+                            <input type="checkbox" id="myInquCheck"><label for="myInquCheck">내 문의 모아보기</label>
+                        </div>
+                        <div class="btn-area">
+                            <a class="btn btn-write" href="../Mypage/ask.html" target="_blank">문의하기</a>
+                        </div>
+                    </div>
+                    <div class="Inqu-area">
+                        <ul>
+                            <li class="qna-List">
+                                <span class="inquiry-subject ">결제 관련 문의</span>
+                                <div class="inquiry-info">
+                                    <span class="txt_sub inqu-ans">답변 대기 중</span>
+                                    <div>
+                                        <span class="txt_sub inqu-name">홍길동</span>
+                                        <span class="txt_sub inqu-tim">2021.00.00 00:00</span>
+                                        <div class="my-write">
+                                            <span><a>수정</a></span><span>|</span><span><a>삭제</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="qna-List">
+                                <span class="inquiry-subject ">결제 관련 문의</span>
+                                <div class="inquiry-info">
+                                    <span class="txt_sub inqu-ans">답변 대기 중</span>
+                                    <div>
+                                        <span class="txt_sub inqu-name">홍길동</span>
+                                        <span class="txt_sub inqu-tim">2021.00.00 00:00</span>
+                                        <div class="my-write">
+                                            <span><a>수정</a></span><span>|</span><span><a>삭제</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="qna-List">
+                                <span class="inquiry-subject ">결제 관련 문의</span>
+                                <div class="inquiry-info">
+                                    <span class="txt_sub inqu-ans">답변 대기 중</span>
+                                    <div>
+                                        <span class="txt_sub inqu-name">홍길동</span>
+                                        <span class="txt_sub inqu-tim">2021.00.00 00:00</span>
+                                        <!-- <div class="my-write">
+                                            <span><a>수정</a></span><span>|</span><span><a>삭제</a></span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="qna-List">
+                                <span class="inquiry-subject ">결제 관련 문의</span>
+                                <div class="inquiry-info">
+                                    <span class="txt_sub inqu-ans">답변 대기 중</span>
+                                    <div>
+                                        <span class="txt_sub inqu-name">홍길동</span>
+                                        <span class="txt_sub inqu-tim">2021.00.00 00:00</span>
+                                        <!-- <div class="my-write">
+                                            <span><a>수정</a></span><span>|</span><span><a>삭제</a></span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pagination">
+                        <div>
+                            <span class="pagePrev"><span class="material-icons-outlined">chevron_left</span></span>
+                            <span class="pageNum active">1</span>
+                            <span class="pageNum">2</span>
+                            <span class="pageNum">3</span>
+                            <span class="pageNum">4</span>
+                            <span class="pageNum">5</span>
+                            <span class="pageNum">6</span>
+                            <span class="pageNext"><span class="material-icons-outlined">chevron_right</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="order-dim"></div> -->
+    <section class="order-btn">
+        <div class="order-dim"></div>
+        <div class="container">
+            <div>
+                <div class="order-area">
+                    <form class="order-form">
+                        <span class="material-icons-outlined close-Order">close</span>
+                        <div class="int-area prd-Name">
+                            <h4>구매 상품</h4>
+                            <div class="pur-select selectItem">
+                                <ul class="buy-ul">
+                                    <li class="sl-list">
+                                        <div class="listName">
+                                            <h4>자기의 발견 1</h4>
+                                        </div>
+                                        <div class="listPrice">
+                                            <div>
+                                                <button type="button" class="numUp">-</button>
+                                                <input type="text" class="T-num" value="1개" readonly="readonly">
+                                                <button type="button" class="numdown">+</button>
+                                            </div>
+                                            <span>25,000</span><span>원</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="gift-ul">
+                                    <li class="sl-list">
+                                        <div class="listName">
+                                            <h4>자기의 발견 1</h4>
+                                            <span>25,000원</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="int-area prd-price">
+                            <h4>총 수량 1개</h4>
+                            <div>
+                                <!-- <span>최종 결제 금액의 1% 적립</span> -->
+                                <span class="totla-price">총 금액 25,000원</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="list-bottom">
+                    <!-- <div class="curt-btnArea">
+                        <button type="button" class="btnGroup btn-curt">
+                            <span class="bt-img curticon"></span>
+                            <span class="bt-txt curttxt">CART 담기</span>
+                        </button>
+                        클릭 시 
+                        <button type="button" class="btnGroup2 btn-curt">
+                            <span class="bt-img curticon"></span>
+                            <span class="bt-txt2 curttxt">나의 CART에 담기</span>
+                        </button>
+                    </div> -->
+                    <div class="buy-btnArea">
+                        <button type="button" class="btnGroup btn-buy">
+                            <span class="bt-img buyicon"></span>
+                            <span class="bt-txt buytxt">구매하기</span>
+                        </button>
+                        <!-- 클릭 시 이동 -->
+                        <button type="button" class="btnGroup2 btn-buy" onclick="location.href='../Order/purchase.html'">
+                            <span class="bt-img buyicon"></span>
+                            <span class="bt-txt2 buytxt">바로 구매하기</span>
+                        </button>
+                    </div>
+                    <div class="gift-btnArea">
+                        <button type="button" class="btnGroup btn-gift">
+                            <span class="bt-img gifticon"></span>
+                            <span class="bt-txt gifttxt">선물하기</span>
+                        </button>
+                        <!-- 클릭 시 이동 -->
+                        <button type="button" class="btnGroup2 btn-gift" onclick="location.href='../Order/SNSgift.html'">
+                            <span class="bt-img gifticon"></span>
+                            <span class="bt-txt2 gifttxt">친구에게 선물하기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <div class="snsBox">
+                    <div>
+                        <div><a href="http://www.youtube.com/assestashare" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_01.png" alt="유튜브"></a></div>
+                        <div><a href="http://www.istagram.com/assesta_official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_02.png" alt="인스타그램"></a></div>
+                        <div><a href="http://www.facebook.com/assesta.official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_03.png" alt="페이스북"></a></div>
+                        <div><a href="http://pf.kakao.com/_Wfxnqs" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_04.png" alt="카카오톡"></a></div>
+                    </div>
+                </div>
+                <div class="foo-logo">
+                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_logo.png" alt="어세스타로고"></div>
+                </div>
+                <div class="foo-menu">
+                    <ul>
+                        <li><a>이용약관</a></li>
+                        <li><a>개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                <span class="m-br">서울시 영등포구 국회대로 68길 11, 삼보호정빌딩 5,6층</span>
+                <span class="m-br pc-br">TEL 02)787-1400(평일 9am-6pm) FAX 02)787-1408</span>
+                <span class="m-br pc-br">Email assesta@assesta.com</span>
+            </p>
+            <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>
+        </div>
+    </footer>
+    
+
+
+</div>
+
+<script src="../js/script.js"></script>
+<script>
+    $(document).ready(function(){
+        // 공유하기 클릭
+        $('.btn-copy').click(function(){
+            var urlbox = document.getElementById('share-text');
+            urlbox.select();
+            document.execCommand('Copy');
+            // alert( 'URL 이 복사 되었습니다.');
+        });
+        // 위시리스트 클릭
+        $('.wish').click(function(){
+            var wishImg = $(this).find('img');
+            wishImg.attr("src",function(index, attr){
+                if(attr.match('_off')){
+                    return attr.replace('_off','_on');
+                }else{
+                    return attr.replace('_on','_off');
+                }
+            });
+        });
+
+        let orderBtn = $('.list-bottom > div');
+        let orderUl = $('.order-form' ).find('ul');
+        $('.curt-btnArea,.buy-btnArea').click(function(){
+            // orderBtn.removeClass('show');
+            // orderBtn.removeClass("on");
+            $('body').toggleClass('show');
+            $('.order-form').slideToggle(250);
+            $('.order-dim').toggleClass('show');
+            $(this).toggleClass('show');
+            orderBtn.not($(this)).toggleClass("on");
+        });
+        $('.gift-btnArea').click(function(){
+            $('.order-form').find('ul').toggleClass('show');
+            $('body').toggleClass('show');
+            $('.order-form').slideToggle(250);
+            $('.order-dim').toggleClass('show');
+            $(this).toggleClass('show');
+            orderBtn.not($(this)).toggleClass("on");
+        });
+        $('.order-dim, .close-Order').click(function(){
+            $('body').removeClass('show');
+            $('.order-dim').toggleClass('show');
+            $('.order-form').slideToggle(250);
+            if(orderBtn.hasClass('show')){
+                orderBtn.removeClass('show');
+            }
+            if(orderBtn.hasClass('on')){
+                orderBtn.removeClass('on');
+            }
+            if(orderUl.hasClass('show')){
+                orderUl.removeClass('show')
+            }
+        });
+        // 리뷰삭제
+        // $('.user-delBtn').click(function(){
+        //     $(this).closest('li').remove();
+        //     // $(this).closest('li').addClass('on');
+        // });
+
+
+    });
+</script>
+
+</body>
+</html>
