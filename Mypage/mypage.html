@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 사람의 발견</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" >
+    <link rel="stylesheet" type="text/css" href="../css/common.css" >
+
+    <link rel="stylesheet" type="text/css" href="../css/mobile.css" >
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1024px)" href="../css/tab.css" >
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1025px)" href="../css/pc.css" >
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+
+    <!-- 헤더 -->
+    <header id="gnbNav">
+        <div class="container">
+            <nav class="gnbBox">
+                <div class="menu"><span></span><span></span><span></span></div>
+                <div class="snsBox">
+                    <div>
+                        <div><a href="http://www.youtube.com/assestashare" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_01.png" alt="유튜브"></a></div>
+                        <div><a href="http://www.istagram.com/assesta_official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_02.png" alt="인스타그램"></a></div>
+                        <div><a href="http://www.facebook.com/assesta.official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_03.png" alt="페이스북"></a></div>
+                        <div><a href="http://pf.kakao.com/_Wfxnqs" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_04.png" alt="카카오톡"></a></div>
+                    </div>
+                </div>
+                <div class="logo"><div><img src="http://img.assesta.com/AssestaExam/mbtifront/logo.gif" alt="사람의발견 로고"></div></div>
+                <!-- 로그인 전 버튼 -->
+                <div class="test"><button type="button" onclick="location.href='login.html';" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
+                <!-- 로그인 후 버튼 -->
+                <!-- <div class="goMy"><button type="button" onclick="location.href='';" class="btn-my"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_mygo.png" alt="사람 아이콘"></button></div> -->
+
+            </nav>
+        </div>
+        <div class="dim-area">
+            <div class="sideBox">
+                <button type="button" class=" btn-close menu-close"><span></span></button>
+                <div class="sidebar">
+                    <!-- 로그인 전 상태 -->
+                    <div class="side-user userLogout" style="display: none;">
+                        <p>로그인이 필요합니다.</p>
+                    </div>
+                    <!-- 로그인 후 나타나게 해주세요 -->
+                    <!-- 로그인 후 상태 -->
+                    <div class="side-user userLogin">
+                        <p>홍길동 님 반가워요</p>
+                        <a>마이페이지 보러 가기</a>
+                    </div>
+
+                    <ul class="largeMenu">
+                        <li>
+                            <a href="#">About</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">MBTI 사람의 발견 소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Service</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">자기의 발견 1</a></li>
+                                <!-- <li><a href="#">자기의 발견 2</a></li> -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Contents</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">연구자료</a></li>
+                                <li><a href="#">영상모음. ZIP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Communication</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">Q&A</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 로그인 후 나타나게 해주세요 -->
+                    <button type="button" class="btn btn-logout">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    
+    </header>
+
+    <!-- content -->
+    <section class="title-Section mypageTitle">
+        <div class="container">
+            <div class="title-Area">
+                <h2>마이페이지</h2>
+            </div>
+        </div>
+    </section>
+    <section class="mypage">
+        <div class="container">
+            <div class="myInfo-area">
+                <h2>홍길동님 안녕하세요!<span><img src="http://img.assesta.com/AssestaExam/mbtifront/img_my_07.png" alt="손바닥이미지"></span></h2>
+                <p>ghdrlfehd@assesta.com</p>
+                <p>정보수정<span><img src="http://img.assesta.com/AssestaExam/mbtifront/img_my_08.png" alt="톱니바퀴아이콘"></span></p>
+            </div>
+            <div class="btn-area">
+                <div>
+                    <a href="../Order/payment-detail.html">
+                        <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img_my_09.png" alt="신용카드아이콘"></div>
+                        <p>결제/환불 내역</p>
+                    </a>
+                    <a href="coupon.html">
+                        <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img_my_10.png" alt="쿠폰아이콘"></div>
+                        <p>쿠폰 : 0장</p>
+                    </a>
+                </div>
+                <div>
+                    <button type="button" class="btn state-not" onclick="location.href = 'mbti_current.html';">검사하기/최적유형 찾기/결과보기</button>
+                </div>
+            </div>
+            <div class="help-area">
+                <h4>도움이 필요하세요?</h4>
+                <ul>
+                    <li><a href="../contents/qna.html">Q&A<span>></span></a></li>
+                    <li><a href="../contents/notice.html">공지사항<span>></span></a></li>
+                </ul>
+                <a href="myinfo/myinfo-pwd.html">회원탈퇴</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <div class="snsBox">
+                    <div>
+                        <div><a href="http://www.youtube.com/assestashare" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_01.png" alt="유튜브"></a></div>
+                        <div><a href="http://www.istagram.com/assesta_official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_02.png" alt="인스타그램"></a></div>
+                        <div><a href="http://www.facebook.com/assesta.official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_03.png" alt="페이스북"></a></div>
+                        <div><a href="http://pf.kakao.com/_Wfxnqs" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_04.png" alt="카카오톡"></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="foo-menu">
+                <div class="foo-contain">
+                    <div class="foo-logo">
+                        <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_logo.png" alt=""></div>
+                    </div>
+                    <ul>
+                        <li><a>이용약관</a></li>
+                        <li><a>개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <p>
+                    <span class="m-br">서울시 영등포구 국회대로 68길 11, 삼보호정빌딩 5,6층</span>
+                    <span class="m-br pc-br">TEL 02)787-1400(평일 9am-6pm) FAX 02)787-1408</span>
+                    <span class="m-br pc-br">Email assesta@assesta.com</span>
+                </p>
+                <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>
