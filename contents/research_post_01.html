@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 사람의 발견</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" >
+    <link rel="stylesheet" type="text/css" href="../css/common.css" >
+
+    <link rel="stylesheet" type="text/css" href="../css/mobile.css" >
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1024px)" href="../css/tab.css" >
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1025px)" href="../css/pc.css" >
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- 공유 팝업 -->
+    <div class="modal mo-share">
+        <div class="mo-dim"></div>
+        <div class="modal-body">
+            <div class="contentBox">
+                <button class="share-close"><span class="material-icons-outlined">close</span></button>
+                <h4 class="share-title">공유하기</h4>
+                <ul class="shareIcon">
+                    <!-- <li> 
+                        <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_naver.png" alt="네이버 블로그"></a></div>
+                        <span>네이버 블로그</span>
+                    </li>-->
+                    <li>
+                        <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_facebook.png" alt="페이스북"></a></div>
+                        <span>페이스북</span>
+                    </li>
+                    <li>
+                        <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_kakao.png" alt="카카오톡"></a></div>
+                        <span>카카오톡</span>
+                    </li>
+                </ul>
+                <div class="share-link">
+                    <input type="text" class="int" id="share-text" value=" www.saram.career4u.net">
+                    <button type="button" class="btn btn-copy">복사</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 다운로드 팝업 -->
+    <div class="modal mo-download">
+        <div class="mo-dim"></div>
+        <div class="modal-body">
+            <div class="contentBox">
+                <form class="form-area">
+                    <div class="int-area">
+                        <h4>이름</h4>
+                        <input type="text" class="int int-name" placeholder="이름을 입력해주세요.">
+                    </div>
+                    <div class="int-area">
+                        <h4>이메일</h4>
+                        <input type="email" class="int int-email" placeholder="자료를 받을실 이메일을 입력해주세요.">
+                    </div>
+                    <p>작성해주신 이메일로 자료가 전송됩니다.</p>
+                    <div class="btn-area">
+                        <button class="btn btn-cancel">취소</button>
+                        <button type="submit" class="btn">다운받기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 헤더 -->
+    <header id="gnbNav">
+        <div class="container">
+            <nav class="gnbBox">
+                <div class="menu"><span></span><span></span><span></span></div>
+                <div class="snsBox">
+                    <div>
+                        <div><a href="http://www.youtube.com/assestashare" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_01.png" alt="유튜브"></a></div>
+                        <div><a href="http://www.istagram.com/assesta_official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_02.png" alt="인스타그램"></a></div>
+                        <div><a href="http://www.facebook.com/assesta.official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_03.png" alt="페이스북"></a></div>
+                        <div><a href="http://pf.kakao.com/_Wfxnqs" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_04.png" alt="카카오톡"></a></div>
+                    </div>
+                </div>
+                <div class="logo"><div><img src="http://img.assesta.com/AssestaExam/mbtifront/logo.gif" alt="사람의발견 로고"></div></div>
+                <!-- 로그인 전 버튼 -->
+                <div class="test"><button type="button" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
+                <!-- 로그인 후 버튼 -->
+                <!-- <div class="goMy"><button type="button" class="btn-my"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_mygo.png" alt="사람 아이콘"></button></div> -->
+
+            </nav>
+        </div>
+        <div class="dim-area">
+            <div class="sideBox">
+                <button type="button" class="btn-close"><span></span></button>
+                <div class="sidebar">
+                    <!-- 로그인 전 상태 -->
+                    <div class="side-user userLogout" style="display: none;">
+                        <p>로그인이 필요합니다.</p>
+                    </div>
+                    <!-- 로그인 후 나타나게 해주세요 -->
+                    <!-- 로그인 후 상태 -->
+                    <div class="side-user userLogin">
+                        <p>홍길동 님 반가워요</p>
+                        <a>마이페이지 보러 가기</a>
+                    </div>
+
+                    <ul class="largeMenu">
+                        <li>
+                            <a href="#">About</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">MBTI 사람의 발견 소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Service</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">자기의 발견 1</a></li>
+                                <li><a href="#">자기의 발견 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Contents</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">연구자료</a></li>
+                                <li><a href="#">영상모음. ZIP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Communication</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">Q&A</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 로그인 후 나타나게 해주세요 -->
+                    <button type="button" class="btn btn-logout">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    
+    </header>
+
+    <!-- content -->
+    <section class="title-Section post-title">
+        <div class="container">
+            <div class="title-Area">
+                <h2>연구자료</h2>
+            </div>
+        </div>
+    </section>
+    <section class="post-01">
+        <div class="container">
+            <h4>2021 MBTI 유형분포표</h4>
+            <div class="post-head">
+                <p>2021.00.00 <strong>View</strong><span>1,214</span></p>
+                <div>
+                    <!-- <button class="bookmark"><img src="http://img.assesta.com/AssestaExam/mbtifront/img_bookmark_off.png" alt="북마크off 아이콘"></button> -->
+                    <button class="share"><img src="http://img.assesta.com/AssestaExam/mbtifront/share.png" alt="공유 아이콘"></button>
+                </div>
+            </div>
+            <div class="post-area">
+                <div class="db-info-02">
+                    <div class="table-area counter">
+                        <div class="table-01">
+                            <div class="type-val val-istj">ISTJ<br><span data-rate="12.8"></span></div>
+                            <div class="type-val val-isfj">ISFJ<br><span data-rate="8.3"></span></div>
+                            <div class="type-val val-infj">INFJ<br><span data-rate="2.9"></span></div>
+                            <div class="type-val val-intj">INTJ<br><span data-rate="3.3"></span></div>
+                        </div>
+                        <div class="table-02">
+                            <div class="type-val val-istp">ISTP<br><span data-rate="4.1"></span></div>
+                            <div class="type-val val-isfp">ISFP<br><span data-rate="6.5"></span></div>
+                            <div class="type-val val-infp">INFP<br><span data-rate="6.7"></span></div>
+                            <div class="type-val val-intp">INTP<br><span data-rate="3.2"></span></div>
+                        </div>
+                        <div class="table-03">
+                            <div class="type-val val-estp">ESTP<br><span data-rate="4.2"></span></div>
+                            <div class="type-val val-esfp">ESFP<br><span data-rate="7.2"></span></div>
+                            <div class="type-val val-enfp">ENFP<br><span data-rate="9.7"></span></div>
+                            <div class="type-val val-entp">ENTP<br><span data-rate="3.6"></span></div>
+                        </div>
+                        <div class="table-04">
+                            <div class="type-val val-estj">ESTJ<br><span data-rate="12.4"></span></div>
+                            <div class="type-val val-esfj">ESFJ<br><span data-rate="8.2"></span></div>
+                            <div class="type-val val-enfj">ENFJ<br><span data-rate="3.3"></span></div>
+                            <div class="type-val val-entj">ENTJ<br><span data-rate="3.5"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-summary">
+                    <p>한국인의 최신 유형분포표를 공개합니다!<br>
+                        대한민국에 나와 같은 MBTI 유형은 얼마나 있을까?<br>
+                        2012년부터 2020년 사이 MBTI From M 검사 기준, 총 19,070명의 자료로 업데이트한 따끈한 자료!<br>
+                        자료에서 MBTI 선호지표별 연령별, 성별 분포도 함께 확인해보세요! 
+                        </p>
+                    <div>
+                        <span><img src="http://img.assesta.com/AssestaExam/mbtifront/img_contents_01.jpg" alt="열쇠키 이미지"></span><span><strong>키워드</strong> #MBTI #유형 #한국 #분포 #유형분포</span>
+                    </div>
+                </div>
+                <p>※ 해당 자료의 전문을 받아보고 싶다면 다운로드 하세요.</p>
+                <button class="btn btn-download">다운로드</button>
+            </div>
+        </div>
+    </section>
+    <section class="post-02">
+        <div class="container">
+            <div class="related-area" style="display: none;">
+                <h4>관련 콘텐츠</h4>
+                <div class="related-con">
+                    <div>
+                        <div class="sm-list related-01">
+                            <a href="research_post_01.html"><img src="" alt="임시이미지"></a>
+                            <div>
+                                <p>연구자료</p>
+                                <p>이공일공 유형별 자료들 임시</p>
+                                <p>2021.00.00</p>
+                            </div>
+                        </div>
+                        <div class="sm-list related-02">
+                            <a href=""><img src="" alt="임시이미지"></a>
+                            <div>
+                                <p>연구자료</p>
+                                <p>이공일공 유형별 자료들 임시</p>
+                                <p>2021.00.00</p>
+                            </div>
+                        </div>
+                        <div class="sm-list related-03">
+                            <a href=""><img src="" alt="임시이미지"></a>
+                            <div>
+                                <p>연구자료</p>
+                                <p>이공일공 유형별 자료들 임시</p>
+                                <p>2021.00.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="related-area">
+                <a href="research_data.html" class="btn btn-link">목록</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <div class="snsBox">
+                    <div>
+                        <div><a href="http://www.youtube.com/assestashare" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_01.png" alt="유튜브"></a></div>
+                        <div><a href="http://www.istagram.com/assesta_official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_02.png" alt="인스타그램"></a></div>
+                        <div><a href="http://www.facebook.com/assesta.official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_03.png" alt="페이스북"></a></div>
+                        <div><a href="http://pf.kakao.com/_Wfxnqs" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_04.png" alt="카카오톡"></a></div>
+                    </div>
+                </div>
+                <div class="foo-logo">
+                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_logo.png" alt="어세스타로고"></div>
+                </div>
+                <div class="foo-menu">
+                    <ul>
+                        <li><a>이용약관</a></li>
+                        <li><a>개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                <span class="m-br">서울시 영등포구 국회대로 68길 11, 삼보호정빌딩 5,6층</span>
+                <span class="m-br pc-br">TEL 02)787-1400(평일 9am-6pm) FAX 02)787-1408</span>
+                <span class="m-br pc-br">Email assesta@assesta.com</span>
+            </p>
+            <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/script.js"></script>
+<script>
+    $(document).ready(function(){
+        // 공유하기 클릭
+        $('.share').on('click',function(){
+            $('body').addClass('show');
+            $('.mo-share').fadeIn(250);
+        });
+        // 링크 복사
+        $('.btn-copy').click(function(){
+            var urlbox = document.getElementById('share-text');
+            urlbox.select();
+            document.execCommand('Copy');
+            // alert( 'URL 이 복사 되었습니다.');
+        });
+        // 뷱마크 클릭
+        $('.bookmark').click(function(){
+            var wishImg = $(this).find('img');
+            wishImg.attr("src",function(index, attr){
+                if(attr.match('_off')){
+                    return attr.replace('_off','_on');
+                }else{
+                    return attr.replace('_on','_off');
+                }
+            });
+        });
+        // 유형별 분포
+        let type = $('.type-val');
+        type.each(function(){
+            let typeItem = $(this);
+            let typeCurr =  typeItem.find('span');
+            let typeData = typeCurr.attr('data-rate');
+            $({rate:0}).delay(1600).animate({rate:typeData},{
+                duration:1000,
+                progress:function(){
+                    let numFix = this.rate;
+                    let now = numFix.toFixed(1);
+                    typeCurr.text(now + '%');
+                }
+            });
+        });
+
+
+    });
+</script>
+
+</body>
+</html>

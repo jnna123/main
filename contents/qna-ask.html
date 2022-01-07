@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 사람의 발견</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined"
+ rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" >
+    <link rel="stylesheet" type="text/css" href="../css/common.css" >
+
+    <link rel="stylesheet" type="text/css" href="../css/mobile.css" >
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1024px)" href="../css/tab.css" >
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1025px)" href="../css/pc.css" >
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    
+    <!-- 헤더 -->
+    <header id="gnbNav">
+        <div class="container">
+            <nav class="gnbBox">
+                <div class="menu"><span></span><span></span><span></span></div>
+                <div class="snsBox">
+                    <div>
+                        <div><a href="http://www.youtube.com/assestashare" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_01.png" alt="유튜브"></a></div>
+                        <div><a href="http://www.istagram.com/assesta_official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_02.png" alt="인스타그램"></a></div>
+                        <div><a href="http://www.facebook.com/assesta.official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_03.png" alt="페이스북"></a></div>
+                        <div><a href="http://pf.kakao.com/_Wfxnqs" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_04.png" alt="카카오톡"></a></div>
+                    </div>
+                </div>
+                <div class="logo"><div><img src="http://img.assesta.com/AssestaExam/mbtifront/logo.gif" alt="사람의발견 로고"></div></div>
+                <!-- 로그인 전 버튼 -->
+                <div class="test"><button type="button" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
+                <!-- 로그인 후 버튼 -->
+                <!-- <div class="goMy"><button type="button" class="btn-my"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_mygo.png" alt="사람 아이콘"></button></div> -->
+
+            </nav>
+        </div>
+        <div class="dim-area">
+            <div class="sideBox">
+                <button type="button" class="btn-close"><span></span></button>
+                <div class="sidebar">
+                    <!-- 로그인 전 상태 -->
+                    <div class="side-user userLogout" style="display: none;">
+                        <p>로그인이 필요합니다.</p>
+                    </div>
+                    <!-- 로그인 후 나타나게 해주세요 -->
+                    <!-- 로그인 후 상태 -->
+                    <div class="side-user userLogin">
+                        <p>홍길동 님 반가워요</p>
+                        <a>마이페이지 보러 가기</a>
+                    </div>
+
+                    <ul class="largeMenu">
+                        <li>
+                            <a href="#">About</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">MBTI 사람의 발견 소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Service</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">자기의 발견 1</a></li>
+                                <li><a href="#">자기의 발견 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Contents</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">연구자료</a></li>
+                                <li><a href="#">영상모음. ZIP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Communication</a>
+                            <ul class="smallMenu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">Q&A</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 로그인 후 나타나게 해주세요 -->
+                    <button type="button" class="btn btn-logout">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    
+    </header>
+    
+    <!-- content -->
+    <section class="title-Section qna-title">
+        <div class="container" style="background: none;">
+            <div class="title-Area">
+                <h2>Q&A</h2>
+            </div>
+        </div>
+    </section>
+    <section class="ask-writing qna-writing">
+        <div class="container">
+            <div class="ask-content">
+                <h2>문의하기</h2>
+                <div class="ask-01">
+                    <h4>문의 유형</h4>
+                    <div class="askType-area">
+                        <ul>
+                            <li class="ask-type type-goods active">검사<i></i></li><li class="ask-type type-payment">결제<i></i></li><li class="ask-type type-refund">환불<i></i></li><li class="ask-type type-etc">기타</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ask-02">
+                    <h4>문의 내용</h4>
+                    <div class="ask-textBox">
+                        <textarea  type="text" class="A-textBox" placeholder="문의 내용을 입력해주세요.&#10;주문 번호를 적어주시면 더 빠른 답변이 가능합니다."></textarea>
+                    </div>
+                    <!-- <p>문의내용에 대한 답변은 '마이페이지 > 마이메뉴 > 내 게시물 관리'에서 쉽게 확인하실 수 있습니다.</p> -->
+                    <button type="submit" class="btn btn-send">문의하기</button>
+                    <!-- 수정버튼 -->
+                    <button type="submit" class="btn btn-send" style="display:none">수정하기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <div class="snsBox">
+                    <div>
+                        <div><a href="http://www.youtube.com/assestashare" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_01.png" alt="유튜브"></a></div>
+                        <div><a href="http://www.istagram.com/assesta_official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_02.png" alt="인스타그램"></a></div>
+                        <div><a href="http://www.facebook.com/assesta.official" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_03.png" alt="페이스북"></a></div>
+                        <div><a href="http://pf.kakao.com/_Wfxnqs" target='_blank'><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_04.png" alt="카카오톡"></a></div>
+                    </div>
+                </div>
+                <div class="foo-logo">
+                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img_foo_logo.png" alt="어세스타로고"></div>
+                </div>
+                <div class="foo-menu">
+                    <ul>
+                        <li><a>이용약관</a></li>
+                        <li><a>개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                <span class="m-br">서울시 영등포구 국회대로 68길 11, 삼보호정빌딩 5,6층</span>
+                <span class="m-br pc-br">TEL 02)787-1400(평일 9am-6pm) FAX 02)787-1408</span>
+                <span class="m-br pc-br">Email assesta@assesta.com</span>
+            </p>
+            <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>
+        </div>
+    </footer>
+    
+
+
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

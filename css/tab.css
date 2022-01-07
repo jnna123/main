@@ -1,0 +1,1108 @@
+@charset "utf-8";
+body{
+  /* display: flex;
+  flex-direction: column; */
+  height: 100%;
+}
+.wrap {
+  /* mobile viewport bug fix */
+  /* min-height: -webkit-fill-available; */
+  /* position: fixed; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.wrap-con{
+  width: 100%;
+  height: calc(100vh - 267px);
+  display: flex;
+  flex-direction: column;
+  overflow: auto; 
+}
+form{
+  padding: 40px;
+}
+
+/* 팝업 */
+.modal .contentBox {
+  top: 30%;
+}
+/* 쿠폰 팝업 */
+.couponPop {
+  align-items: center;
+  display: block;
+  position: absolute;
+  width: 50%;
+  top: 73px;
+  left: 25%;
+  background-color: #fff;
+  color: #999;
+}
+.innerPop {
+  display: block;
+  z-index: 3;
+  background-color: #f2f3f7;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  left: 10%;
+  position: absolute;
+  top: 200px;
+}
+
+/* 사이드바 */
+.sideBox {
+  width: 35%;
+}
+/* 타이틀 */
+.title-Section > .container{
+  background-position: bottom left;
+}
+@keyframes bike-right {
+  0%{right: 80%;}
+  100%{right: 0;}
+}
+
+/* 타이틀 2 */
+.title-Tem .title-Area h2{
+  line-height: 29px;
+}
+
+/* 메인 */
+.main-wrap{
+  position: static;
+  height: auto;
+}
+[class*="sc-area"] h2.main-title {
+  /* padding-top: 150px; */
+}
+.sc-area-01 .container{
+  max-width: 100%;
+}
+.imgAni {
+  position: relative;
+  height: 230px;
+}
+.imgAni .imgHeart1 {
+  width: 45px;
+  left: 250px;
+  bottom: 90px;
+}
+.imgAni .imgHeart2 {
+  width: 45px;
+  left: 250px;
+  bottom: 110px;
+}
+.imgAni .imgbicy1{
+  width: 260px;
+}
+/* 메인 섹션2 */
+.mainText-02 video{
+  height: 400px;
+}
+/* 메인 섹션 3 */
+.imgAction{
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+.imgAction img{
+  display: block;
+  margin: 0 auto;
+  }
+.section .imgAction.activ {
+  left: 0;
+}
+.mainText-03 .imgAni{
+  height: 240px;
+}
+.imgAni .imgbicy2 {
+  width: 130px;
+  top: 40px;
+}
+/* 메인 섹션 4 */
+.mainText-04 .imgAni{
+  height: 280px;
+}
+.imggiftBox{
+  width: 0;
+  height: 0;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+.section .imggiftBox.active{
+  width: 320px;
+}
+/* 메인 섹션 7 */
+.sc-area-07 .container {
+  background-color: #999;
+}
+.sc-area-07 .flex-sc{
+  height: 100%;
+  justify-content: flex-start !important;
+}
+.sc-area-07 .mainfoo-Img{
+  margin-top: auto;
+}
+.sc-area-07 .mainfoo-Img > div {
+  background-size: 70%;
+}
+.sc-area-07 .mg-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.sc-area-07 .foo-logo{
+  margin: 20px 0;
+}
+
+
+
+
+/* 로그인 */
+.login,.login .container,.login form{
+  height: 100%;
+}
+.login form .btn_area > div {
+  justify-content: center;
+}
+.login form .btn_area > div > button {
+  margin: 0 10px;
+}
+
+/* 비밀번호 찾기 , 이메일 찾기*/
+
+.E-title > .container{
+  background-repeat: repeat-x;
+  background-position: bottom left -5rem;
+}
+.find{
+  height: 100%;
+}
+.find .container{
+  height: 100%;
+}
+.find form{
+  height: 100%;
+}
+
+/* 재설정 */
+.reset-ok{
+  height: 100%;
+}
+.reset-ok button{
+  /* width: 50%; */
+  margin: 0 auto;
+}
+
+
+/* 회원가입 */
+.joinF-form{
+  border-radius: 20px;
+  padding: 40px;
+}
+.bir-year span {
+  right: 82px;
+}
+.bir-mm select{
+  padding: 0 87px;
+}
+.bir-dd span {
+  right: 90px;
+}
+.joinF-form .btn_area:nth-of-type(1) > div > span:nth-of-type(1),
+.joinF-form .btn_area:nth-of-type(1) > div > span:nth-of-type(3) {
+  width: 42%;
+}
+.joinF form .btn_area:nth-of-type(2) > button:first-child{
+  margin-bottom: 20px;
+}
+
+
+/* 회원가입 - 구매 탭 */
+.join-tab .join_contain {
+  background-image: url("http://img.assesta.com/AssestaExam/mbtifront/img__pur_03.png");
+  height: 828px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+.int-rrn div{
+  width: calc(100% / 2);
+}
+.int-cashCard div{
+  width: calc(100% / 4);
+}
+.Com-selBox02 .int-cashCard div{
+  width: calc(100% / 3);
+}
+.join-tab .join_text{
+  padding-top: 12rem
+}
+.join-tab .join_text > span{
+  font-size: 2rem;
+}
+.join-tab .join_text p,.join-tab .join_text p span{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/* 제품 상세 */
+.product {
+  height: 100%;
+}
+.order-bottom .list-bottom > button:nth-child(1) > .wishoff {
+  background-size: 24px;
+}
+.order-bottom .list-bottom > button:nth-child(1) > .wishoff.show {
+  background-size: 24px;
+}
+.order-bottom .list-bottom > button:nth-child(2) > .buyicon {
+  background-size: 33px;
+}
+.order-bottom .list-bottom > button:nth-child(3) > .gifticon {
+  background-size: 20px;
+}
+.order-bottom .list-bottom > button:nth-child(4) > .curticon {
+  background-size: 23px;
+}
+.order-btn > .container{
+  max-width: 100%;
+}
+.order-btn > .container > div > div {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 마이페이지 - 검사현황 */
+.myView-curr .curr-title{
+  padding: 100px 0 80px;
+}
+.curr-Tab .container, .currTabbox .container{
+  padding: 0 20px;
+}
+.currTabbox{
+  height: 100%;
+}
+.currTabbox .container {
+  height: 100%;
+}
+.currTabbox .container .item-available{
+}
+.currTabbox .container .item-available > div{
+  min-height: 444px;
+}
+.currTabbox .container .item-available > div .no-mbti{
+  min-height: 444px;
+}
+.currTabbox .container .item-available > div .mbti{
+  padding: 40px 40px;
+}
+.currTabbox .container .item-available ul{
+  height: 100%;
+}
+.item-available ul li .imgBox{
+  margin-right: 32px;
+}
+.item-available ul li .imgBox img, .item-completion ul li .imgBox img{
+  width: 100%;
+  height: 100%;
+}
+.item-available ul li .txtBox, .item-completion ul li .txtBox{
+  width: 100%;
+  flex: 1;
+}
+.txtBox > div button:first-child{
+  width: 100%;
+}
+/* 미사용 버튼 ani */
+button.state-not:before {
+  animation: shiny-btn 3.5s ease-in-out infinite;
+  /* transform: scale(50) rotate(45deg); */
+}
+
+@-webkit-keyframes shiny-btn{
+  0% { -webkit-transform: scale(0) rotate(35deg); opacity: 0; }
+  80% { -webkit-transform: scale(0) rotate(35deg); opacity: 0.5; }
+  81% { -webkit-transform: scale(4) rotate(35deg); opacity: 1; }
+  100% { -webkit-transform: scale(60) rotate(35deg); opacity: 0; }
+}
+
+
+/* 마이페이지 */
+.mypageTitle > .container{
+  background-position: bottom left -170px;
+}
+.mypage{
+  height: 100%;
+}
+.mypage > .container{
+  height: 100%;
+}
+
+/* 마이페이지 */
+/* 마이 쿠폰 */
+.coupon {
+  height: 100%;
+}
+.coupon > .container{
+  padding: 60px;
+  height: 100%;
+}
+/* .coupon-Info ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.coupon-Info ul li{
+  margin: 0;
+} */
+.coupon-code span:nth-of-type(2){
+  width: 200px;
+}
+
+/* 마이페이지 - 문의 */
+.ask-writing{
+  height: 100%;
+  display: flex;
+}
+.ask-content .askType-area ul li{
+  width: calc(100% / 4);
+  cursor: pointer;
+}
+.type-test i{
+  display: block;
+}
+.ask-content .ask-02 button{
+  width: 320px;
+  margin: 22px auto;
+}
+/* 마이페이지 - 문의 보기 */
+.askView .container .ask-btn{
+  justify-content: center;
+}
+.askView .container .ask-btn button{
+  width: calc(100% / 4);
+}
+.askView .container .ask-btn button:first-of-type{
+  margin-right: 1.5rem;
+}
+
+/* order - 선물하기 */
+.snsnGift .container{
+  max-width: 100%;
+}
+.snsnGift form{
+  padding: 40px 60px;
+}
+.card-area .cardView > div img{
+  width: 100%;
+}
+.card-area .cardPreview{
+  justify-content: space-evenly;
+}
+
+
+
+
+/* 이용약관 팝업 */
+.policy .content::-webkit-scrollbar{
+  width: 3px;
+  padding-left: 20px;
+}
+.policy .content::-webkit-scrollbar-thumb{
+  height: 17%;
+  background-color: rgba(46, 46, 46, 0.521);
+  border-radius: 10px;    
+}
+.policy .content::-webkit-scrollbar-track{
+  background-color: rgba(0,0,0,0);
+}
+.policy .contentBox{
+  margin-top: 0;
+  width: 500px;
+  height: auto;
+  padding: 30px;
+  padding-right: 0;
+}
+.policy .contentBox .content {
+  /* height: 500px; */
+  padding-right: 30px;
+}
+.policy .close-area{
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.policy button{
+  right: 0;
+}
+/* 리뷰정책 팝업 */
+.policy_review .contentBox{
+  width: 550px;
+  height: 400px;
+}
+.policy_review .close-area {
+  width: 560px;
+}
+.policy_review .contentBox .content{
+overflow: hidden;
+}
+/* about */
+.menu-bar .container, .about-area .container{
+  max-width: 100%;
+}
+footer{
+  margin-top: auto;
+}
+
+/* 서비스 - 리뷰쓰기 */
+.review {
+  margin-top: 110px;
+}
+.photoBox ul{
+  justify-content: center;
+  gap: 0 20px;
+}
+.photoBox ul li{
+  margin: 15px 0;
+}
+.photoBox ul li:last-child{
+  margin-right: 0;
+}
+
+/* contents*/
+/* contents - 연구자료 */
+/* 연구자료  research-01*/
+section[class*="research-"] > .container{
+  padding: 40px 40px 43px;
+  max-width: 800px;
+}
+/* 연구자료  research-02*/
+.research-02 >.container{
+  padding-bottom: 0 !important;
+}
+.research-02 .searchArea form > span{
+  width: 300px;
+  line-height: 44px;
+}
+.research-02 .searchArea form > span:last-of-type{
+  flex: 1;
+}
+.searchArea form > span .int-search{
+  width: 100%;
+}
+.searchArea form > span .int-word .word{
+  width: auto;
+}
+.searchArea form > span .int-word .d-block{
+  display: inline !important;
+}
+/* 연구자료  research-03*/
+.research-03{
+  height: 100%;
+}
+.research-03 > .container{
+  height: 100%;
+  padding-top: 0 !important;
+}
+
+/* 연구 자료 - 서브페이지 포스트 */
+.post-01 > .container{
+  padding: 40px 40px 0;
+}
+.related-area > a{
+  margin: 0 auto;
+}
+.post-02 > .container{
+  background-color: #f2f3f7;
+  padding: 24px 40px 40px;
+}
+
+/* 유형별 분포표 */
+.db-info-02{
+  padding-top: 30px;
+}
+.db-info-02 .table-area {
+  width: 60%;
+  margin: 0 auto;
+}
+.db-info-02 .table-area [class*="table"]{
+  /* padding: 0 100px; */
+  margin-bottom: 25px;
+}
+/* 분포표 ani */
+@keyframes type-show{
+  0%{opacity: 0;transform: scale(0);}
+  100%{opacity: 1;transform: scale(1.2);}
+}
+
+
+/* contents - Q&A */
+/* Q&A - 문의 목록*/
+.qnaList{
+  height: 100%;
+}
+.qnaList > .container{
+  min-height: 829px;
+  padding: 40px;
+}
+.board-area{
+  min-height: 710px;
+}
+
+/* contents - 공지사항 */
+.notice-search .searchArea form > .search-word.active + span{
+  width: 100%;
+  flex: 2;
+}
+.notice-search .searchArea form > .search-word.active + span .int-search{
+  width: 100%;
+}
+/* 공지사항 - 내용 */
+.board-body .txt-area{
+  min-height: 350px;
+}
+
+/* contents - 영상모음*/
+/* 영상모음 페이지 - 꿀팁 */
+.videoZip-03{
+  height: 100%;
+}
+.videoZip-03 .container{
+  height: 100%;
+}
+.videoZip .tab-menu a {
+  padding: 3px 0;
+  border-radius: 100px;
+}
+.videoZip-03 ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.videoZip-03 ul li{
+  width: 100%;
+}
+.searchArea form > span {
+  line-height: 44px;
+}
+.videoZip-03 ul li a > div:nth-of-type(2){
+  width: 100%;
+}
+.videoZip-03 ul li a h4{
+  width: 200px;
+}
+/* 영상 포스트 */
+.post-02{
+  height: 100%;
+}
+.related-area .sm-list a div p:nth-of-type(2){
+  width: 200px;
+}
+/* 결제완료 영수증 */
+.rc-title .container{
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+.rc-contents{
+  margin-top: 0;
+  height: 100%;
+}
+.rc-contents .container{
+  height: 100%;
+}
+.rc-Btn{
+  justify-content: center;
+}
+.rc-Btn a{
+  margin: 0 20px;
+}
+
+/* 결제 , 환불 */
+/* 결제 내역 */
+.payDetail{
+  height: 100%;
+}
+.payDetail > .container{
+  height: 100%;
+}
+.payDetail form{
+  height: 100%;
+}
+/* 환불 사유 */
+.reason{
+  height: 100%;
+}
+.reason > .container{
+  height: 100%;
+}
+.reason form{
+  /* height: 82%; */
+}
+/* 환불 신청 */
+.app{
+  height: 100%;
+}
+.app > .container{
+  height: 100%;
+}
+.app .app-area{
+  height: 100%;
+}
+/* 회원정보 비번 확인 */
+.myinfo-pwd-title .title-Area{
+  padding-top: 90px;
+}
+.myinfo-pwd form{
+  height: auto;
+  border-radius: 20px;
+}
+/* 회원 탈퇴 */
+.leave-form{
+  height: 100%;
+}
+
+/* 선물 받은 유저 로그인 */
+/* other login */
+.other-title .title-Area .title-bg{
+  margin-top: 35%;
+}
+.other{
+  height: 100%;
+}
+.other > .container{
+  max-width: 800px;
+  height: 100%;
+  padding: 20px 40px 40px;
+}
+
+/* 에러 페이지 */
+.error .container{
+  max-width: 500px;
+}
+
+
+
+/* 아이패드 높이 */
+.login-titleBox{
+  /* height: calc(100vh - 815px);
+  height: calc(var(--vh, 1vh) * 100 - 815px); */
+}
+.joinF-titleBox{
+  /* height: calc(100vh - 700.78px);
+  height: calc(var(--vh, 1vh) * 100 -  700.78px); */
+}
+.E-title .container{
+  /* height: calc(100vh - 650px);
+  height: calc(var(--vh, 1vh) * 100 - 650px); */
+}
+.e-searTitle .container{
+  /* height: calc(100vh - 718px);
+  height: calc(var(--vh, 1vh) * 100 - 718px); */
+}
+.pwd-title .container{
+  /* height: calc(100vh - 650px);
+  height: calc(var(--vh, 1vh) * 100 - 650px); */
+}
+.pw-reTitle .container{
+  /* height: calc(100vh - 716px);
+  height: calc(var(--vh, 1vh) * 100 - 716px); */
+}
+.pw-setTitle .container{
+  /* height: calc(100vh - 612px);
+  height: calc(var(--vh, 1vh) * 100 - 612px); */
+}
+
+
+
+/* iphone X 가로모드 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+  .wrap {
+    height: auto;
+  }
+  .modal .contentBox {
+    top: 10%;
+  }
+  @keyframes bicycle {
+    0% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    70% {
+      transform: translateX(75vw);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(75vw);
+      opacity: 1;
+    }
+  }
+}
+@media (min-width: 768px){
+  .aboutText-01 .container{
+    background-size: 100%;
+    background-position: top -170px center;
+  }
+  .aboutImg{
+    height:445px;
+  }
+  .aboutImg div > span:nth-of-type(1) {
+    width: 300px;
+    left: 140px;
+  }
+  .aboutImg div > span:nth-of-type(2) {
+    width: 300px;
+  }
+  .aboutImg div > span:nth-of-type(3) {
+    width: 200px;
+    right: -60px;
+  }
+  .aboutText-02 .aboutImg div {
+    background-position: top -340px center;
+  }
+  .aboutText-02 .aboutImg {
+    height: 600px;
+  }
+  .aboutText-03 .about-title .imgblr:nth-of-type(1) {
+    left: 190px;
+  }
+  .aboutText-03 .about-title .imgblr:nth-of-type(2) {
+    right: 190px;
+  }
+}
+@media (min-width: 1024px){
+  h2{
+    font-size: 1.75rem;
+  }
+  .btn{
+    font-size: 18px;
+  }
+  .btn_area > button{
+    height: 54px;
+  }
+
+  /* 타이틀 */
+  .title-Section .title-Area > h2{
+    padding: 80px 0 37px;
+  }
+  .aboutText-01 .container{
+    background-size: 100%;
+    background-position: top -230px center;
+  }
+  .aboutImg {
+    height: 615px;
+  }
+  .aboutImg div > span:nth-of-type(1) {
+    width: 300px;
+    left: 140px;
+  }
+  .aboutImg div > span:nth-of-type(2) {
+    width: 300px;
+  }
+  .aboutImg div > span:nth-of-type(3) {
+    width: 200px;
+    right: -60px;
+  }
+  .aboutText-02 .aboutImg div {
+    background-image: url('http://img.assesta.com/AssestaExam/mbtifront/img_about_06.png');
+    background-position: top -440px center;
+  }
+  .aboutText-02 .aboutImg {
+    height: 810px;
+  }
+  .aboutText-03 .about-title .imgblr:nth-of-type(1) {
+    left: 320px;
+  }
+  .aboutText-03 .about-title .imgblr:nth-of-type(2) {
+    right: 320px;
+  }
+  /* 서비스 - 리뷰쓰기 */
+  .review {
+    margin-top: 117px;
+  }
+  .review .container, .ask-writing .container {
+    padding: 60px;
+    max-width: 800px;
+  }
+  .joinF-form .btn_area button{
+    width: 80%;
+    margin: 0 auto;
+  }
+  /* 마이페이지 */
+  .mypageTitle > .container{
+    background-position: bottom left -55px;
+  }
+  /* 마이페이지 */
+  /* 검사 현황 */
+  .curr-title .title-Area > h2{
+    padding-top: 172px;
+    padding-bottom: 80px;
+  }
+  .curr-Tab .curr-tabbox div{
+    height: 52px;
+  }
+  .curr-Tab .container, .currTabbox .container{
+    height: auto;
+    max-width: 800px;
+    padding: 0;
+  }
+  .currTabbox .container .item-available{
+    height: auto;
+  }
+  .currTabbox .container .item-available ul{
+    height: auto;
+  }
+  .curr-Tab .curr-tabbox div > a{
+    font-size: 1.125rem;
+    height: 100%;
+    line-height: 52px;
+  }
+  .txtBox p{
+    font-size: 1.25rem;  
+  }
+  .txtBox > div:first-child span{
+    font-size: 1rem;
+  }
+  .mbti-item .txtBox > span{
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+  .item-available ul li .imgBox, .item-completion ul li .imgBox{
+    width: 120px;
+    height: 100px;
+    border: 1px solid rgb(212, 212, 212);
+  }
+  .item-available ul li .imgBox img, .item-completion ul li .imgBox img{
+    width: 100%;
+    height: 100%;
+  }
+  .item-available ul li .txtBox, .item-completion ul li .txtBox{
+    width: 100%;
+  }
+  .txtBox > div button:first-child{
+    height: 40px;
+    width: 100%;
+    font-size: 1.125rem;
+  }
+  /* contents - 연구자료 */
+  .research-02 >.container{
+    padding-top: 0 !important;
+  }
+  /* 포스트 - 유형별 분포표 */
+  .post-01 .post-area > div.db-info-02{
+    padding-top: 30px;
+  }
+  .db-info-02 .table-area{
+    width: 45%;
+    margin: 0 auto;
+  }
+  .db-info-02 .table-area [class*="table"] {
+    padding: 0px;
+    margin-bottom: 25px;
+  }
+  /* 영상모음 */
+  .videoZip > .container{
+    max-width: 800px;
+    padding: 40px;
+    padding-bottom: 24px;
+  }
+  [class*="videoZip-0"] > .container{
+    max-width: 800px;
+    padding: 40px;
+    padding-top: 0;
+  }
+  .videoZip-03 ul li a h4{
+    max-width: 100%;
+  }
+  /* 공지사항 */
+  .board-body .container{
+    border-radius: 20px;
+  }
+  .board-body .txt-area{
+    min-height: 500px;
+  }
+  /* 큐엔에이 */
+  .qnaList > .container{
+    max-width: 800px;
+  }
+  /* 마이 쿠폰 */
+  .coupon-title{
+    margin-top: 194px;
+  }
+  .title-Section > .container{
+    max-width: 800px;
+  }
+  .coupon-title .title-Area-img{
+    padding-bottom:96px
+  }
+  .title-Section .title-Area > div{
+    width: 85px;
+  }
+  .coupon > .container{
+    max-width: 800px;
+  }
+  .coupon h2{
+    font-size: 26px;
+  }
+  .coupon-code span{
+    height: 54px;
+    font-size: 1.125rem;
+  }
+  .coupon-code span:nth-of-type(1){
+    font-size: 1.125rem;
+  }
+  .coupon-code span .int, .coupon-code button{
+    height: 100%;
+    font-size: 1.125rem;
+  }
+  .coupon-code span input::placeholder{
+    font-size: 1.125rem;
+  }
+  .coupon-Info ul li .couponImg{
+    width: 509px;
+  }
+  .coupon-Info ul li .couponImg > div span{
+    font-size: 1.125rem;
+  }
+  .coupon-Info ul li .couponImg > div{
+    top: 30px;
+    left:30px;
+  }
+  .coupon-Info ul li .couponImg > div:nth-of-type(1) span:nth-of-type(2){
+    top: 120px;
+  }
+  .coupon-Info ul li .couponImg > div:nth-of-type(2) span:nth-of-type(1){
+    right: 15px;
+    top: 30px;
+  }
+  .coupon-Info ul li .couponImg > div:nth-of-type(2) span:nth-of-type(2) {
+    right: 17px;
+    top: 50px;
+  }
+  /* 결제 환불 내역 */
+  .payDetail form{
+    min-width: 800px;
+    margin: 0 auto;
+  }
+  .payDetail .nbsp{
+    min-width: 800px;
+    margin: 0 auto;
+  }
+  /* 회원 탈퇴 */
+  .leave .container{
+    max-width: 800px;
+  }
+  /* 회원정보 비번 확인 */
+  .myinfo-pwd-title .title-Area{
+    padding-top: 190px;
+  }
+  .title-Tem .title-Area p{
+    font-size: 1.25rem;
+  }
+  .myinfo-pwd .container{
+    max-width: 800px;
+  }
+  .myinfo-pwd form{
+    height: auto;
+    border-radius: 20px;
+    padding: 40px;
+  }
+  /* 선물 받은 유저 로그인 */
+  /* 로그인 other */
+  .other > .container{
+    padding: 40px;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  /* 회원가입 */
+  .loginTitle .title-txt h2{
+    padding: 80px 0 0;
+  }
+  .joinF .container{
+    max-width: 800px;
+  }
+  /* 로그인 */
+  .login{
+    height: auto;
+  }
+  .login .container{
+    max-width: 800px;
+  }
+  .login form {
+    border-radius: 20px;
+  }
+  
+
+}
+@media (max-height: 650px){
+  .wrap-con{
+    height: auto;
+  }
+  /* 회원가입 */
+  .product {
+    height: auto;
+  }
+  .joinF-titleBox, .login-titleBox{
+    height: 300px;
+  }
+  /* 높이 auto */
+  .research-03,.qnaList,.qnaList > .container,.ask-writing,.askView .container,.login-titleBox,.find,.find .container,.find form, .payDetail,.payDetail > .container, .join, .reason , .reason form{
+    height: auto;
+  }
+  .app,.app > .container, .app .app-area, .mypage, .mypage > .container, .coupon, .coupon > .container,.leave-form{
+    height: auto;
+  }
+  .post-02,.post-02>.container{
+    height: auto !important;
+  }
+  /* 검사 현황 */
+  .currTabbox{
+    height: auto;
+  }
+  .currTabbox .container {
+    height: auto;
+  }
+  .currTabbox .container .item-available{
+    height: auto;
+  }
+  .currTabbox .container .item-available ul{
+    height: auto;
+  }
+  /* 회원정부 비번 확인 */
+  .myinfo-pwd form{
+    border-radius: 20px 20px 0 0;
+  }
+}
+@media (max-height: 800px){
+  .other-title .title-Area .title-bg{
+    margin-top: 15%;
+  }
+  /* 회원가입 */
+  .joinF-form{
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+/* 아이패드 프로 */
+@media only screen and (min-width: 1024px)and (max-height: 1366px)and (orientation: portrait)and (-webkit-min-device-pixel-ratio: 1.5){
+  .reason > .container > div{
+    height: 319px;
+  }
+  /* 에러 페이지 */
+  .error .error-info{
+    margin: 270px 0 50px;
+  }
+  /* 회원가입 */
+  .loginTitle .title-txt h2{
+    padding-top: 227px;
+  }
+}
