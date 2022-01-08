@@ -9,7 +9,7 @@ body{
   /* min-height: -webkit-fill-available; */
   /* position: fixed; */
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -23,6 +23,12 @@ body{
 }
 form{
   padding: 40px;
+}
+.f-block{
+  display: inline;
+}
+header > .container{
+  max-width: 100%;
 }
 
 /* 팝업 */
@@ -52,6 +58,10 @@ form{
   top: 200px;
 }
 
+/* 다운로드 팝업 */
+.mo-download .contentBox{
+  width: 400px;
+}
 /* 사이드바 */
 .sideBox {
   width: 35%;
@@ -68,15 +78,20 @@ form{
 /* 타이틀 2 */
 .title-Tem .title-Area h2{
   line-height: 29px;
+  padding-top: 80px;
 }
 
 /* 메인 */
-.main-wrap{
+/* .main-wrap{
   position: static;
   height: auto;
-}
+} */
 [class*="sc-area"] h2.main-title {
   /* padding-top: 150px; */
+  line-height: 46px;
+}
+[class*="sc-area"] .container{
+  padding: 20px 40px;
 }
 .sc-area-01 .container{
   max-width: 100%;
@@ -87,12 +102,12 @@ form{
 }
 .imgAni .imgHeart1 {
   width: 45px;
-  left: 250px;
+  left: 215px;
   bottom: 90px;
 }
 .imgAni .imgHeart2 {
   width: 45px;
-  left: 250px;
+  left: 220px;
   bottom: 110px;
 }
 .imgAni .imgbicy1{
@@ -166,43 +181,79 @@ form{
 
 
 /* 로그인 */
-.login,.login .container,.login form{
-  height: 100%;
+.loginTitle .title-txt h2{
+  padding-top: 50px;
+}
+.loginTitle .title-Area .title-bg{
+  margin-top: 60px;
+}
+.login .container{
+  margin-bottom: 50px;
+}
+.loginBox{
+  border-radius: 20px;
 }
 .login form .btn_area > div {
   justify-content: center;
 }
-.login form .btn_area > div > button {
-  margin: 0 10px;
-}
 
 /* 비밀번호 찾기 , 이메일 찾기*/
-
-.E-title > .container{
+.PWsearch-title > .container{
   background-repeat: repeat-x;
-  background-position: bottom left -5rem;
 }
-.find{
-  height: 100%;
+.pwd-title > .container{
+  max-width: 800px;
 }
 .find .container{
-  height: 100%;
+  margin-bottom: 50px;
 }
 .find form{
-  height: 100%;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.PWsearch .container{
+  margin-bottom: 0;
+}
+.PWsearch form{
+  margin-bottom: 0;
+  border-radius: 20px 20px 0 0;
 }
 
 /* 재설정 */
+.pwd-title .title-Area h2{
+  padding-top: 80px;
+}
 .reset-ok{
-  height: 100%;
+  border-radius: 20px;
 }
 .reset-ok button{
   /* width: 50%; */
   margin: 0 auto;
 }
+/* 재설정 완료 */
+.resetCon-title .title-Area h2{
+  padding-top: 140px;
+}
+.resetCon-title .title-Area p{
+  padding-bottom: 0;
+}
+.resetCon-title .title-Area .title-bg{
+  margin-top: 80px;
+}
+.resetCon > .container{
+  height: auto;
+  margin-bottom: 50px;
+}
 
-
+/* 회원가입1 */
+.joinFTitle .title-txt h2{
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
 /* 회원가입 */
+.join form{
+  height: 100%;
+}
 .joinF-form{
   border-radius: 20px;
   padding: 40px;
@@ -216,14 +267,21 @@ form{
 .bir-dd span {
   right: 90px;
 }
-.joinF-form .btn_area:nth-of-type(1) > div > span:nth-of-type(1),
-.joinF-form .btn_area:nth-of-type(1) > div > span:nth-of-type(3) {
-  width: 42%;
-}
 .joinF form .btn_area:nth-of-type(2) > button:first-child{
   margin-bottom: 20px;
 }
 
+/* 회원가입 - sns */
+.join-sns .join-sns > h2{
+  padding: 70px 0 14px;
+}
+
+form.join-sns{
+  border-radius: 20px;
+}
+form.join-sns .checkBox {
+  margin: 0;
+}
 
 /* 회원가입 - 구매 탭 */
 .join-tab .join_contain {
@@ -254,10 +312,66 @@ form{
   line-height: 2rem;
 }
 
-/* 제품 상세 */
-.product {
+/* 서비스 - 제품 상세 */
+.product{
+  margin-top: 97px;
+}
+.product .container{
+  /* padding: 40px; */
+  border-radius: 20px 20px 0 0;
+}
+.prd-MBTI > div{
+  margin: 0 40px;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dotted #777;
+}
+.prd-MBTI > div > div{
+  flex: 1;
+}
+.prd-MBTI .mbtiImg > div > a img{
   height: 100%;
 }
+.prd-MBTI .mbtiImg{
+  margin-right: 2rem;
+}
+.prd-MBTI .mbtiName{
+  margin: 0;
+}
+.mbtiName div:nth-of-type(2){
+  border-bottom: none;
+}
+.details-tab .detail-content{
+  padding-top: 56px;
+  height: 1160px;
+}
+.details-tab > .detail-wrap .btn-area{
+  /* padding: 40px; */
+}
+.details-tab > .detail-wrap .btn-area button{
+  height: 54px;
+}
+.details-tab > .detail-wrap .btn-area{
+  height: 130px;
+}
+.details-tab > .detail-wrap .btn-area > div{
+  padding: 130px 40px 40px;
+  bottom: 130px;
+}
+.details-tab > .detail-wrap .btn-area > div button{
+  top: 170px;
+}
+.details-tab .detail-content.show + .btn-area{
+  height: 140px;
+}
+.details-tab .detail-content.show + .btn-area > div{
+  padding: 90px 20px 50px;
+}
+.details-tab .detail-content.show + .btn-area > div button{
+  top: 150px;
+}
+/* 구매단 */
 .order-bottom .list-bottom > button:nth-child(1) > .wishoff {
   background-size: 24px;
 }
@@ -337,24 +451,46 @@ button.state-not:before {
 
 
 /* 마이페이지 */
-.mypageTitle > .container{
-  background-position: bottom left -170px;
+.mypageTitle .join-titleBox > h2{
+  padding-top: 80px;
 }
 .mypage{
   height: 100%;
 }
 .mypage > .container{
-  height: 100%;
+  /* height: 100%; */
+  /* border-radius: 20px; */
+}
+.mypage .btn-area > div a{
+  flex-direction: row;
+}
+.mypage .btn-area > div a p{
+  margin-top: 0;
+}
+.mypage .btn-area > div:nth-of-type(2) button{
+  height: 54px;
+}
+.mypage .btn-area > div a p{
+  margin-left: 10px;
+}
+.mypage .btn-area > div a:nth-of-type(2) p{
+  margin-top: 0;
 }
 
 /* 마이페이지 */
 /* 마이 쿠폰 */
+.coupon-title .title-Area > h2{
+  padding: 80px 0 50px;
+}
 .coupon {
   height: 100%;
 }
 .coupon > .container{
   padding: 60px;
   height: 100%;
+}
+.coupon .coupon-Info{
+  min-height: 320px;
 }
 /* .coupon-Info ul{
   display: grid;
@@ -370,8 +506,15 @@ button.state-not:before {
 
 /* 마이페이지 - 문의 */
 .ask-writing{
-  height: 100%;
   display: flex;
+  padding-top: 60px;
+}
+.ask-writing .container{
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.ask-content{
+  padding: 40px;
 }
 .ask-content .askType-area ul li{
   width: calc(100% / 4);
@@ -381,7 +524,6 @@ button.state-not:before {
   display: block;
 }
 .ask-content .ask-02 button{
-  width: 320px;
   margin: 22px auto;
 }
 /* 마이페이지 - 문의 보기 */
@@ -409,6 +551,13 @@ button.state-not:before {
   justify-content: space-evenly;
 }
 
+/* 마이페이지 Q&A 큐엔에이 보기 */
+.qnaView-title .title-Area > h2{
+  padding: 50px 0;
+}
+.ask-view .view-02{
+  min-height: 200px;
+}
 
 
 
@@ -460,6 +609,17 @@ overflow: hidden;
 }
 footer{
   margin-top: auto;
+}
+/* about 소개 */
+.aboutImg{
+  margin-top: 55px;
+  height: 425px;
+}
+.aboutText-02 .aboutImg div {
+  background-position: top -320px center;
+}
+.aboutText-03 .about-lastSection h2{
+  margin-bottom: 10px;
 }
 
 /* 서비스 - 리뷰쓰기 */
@@ -546,18 +706,30 @@ section[class*="research-"] > .container{
 
 /* contents - Q&A */
 /* Q&A - 문의 목록*/
-.qnaList{
-  height: 100%;
-}
 .qnaList > .container{
-  min-height: 829px;
+  min-height: 500px;
   padding: 40px;
+  /* border-radius: 20px; */
 }
-.board-area{
-  min-height: 710px;
+.qnaList .board-area{
+  min-height: 401px;
+}
+/* Q&A - 문의하기*/
+.qna-writing{
+  margin: 0;
+  padding: 0;
 }
 
 /* contents - 공지사항 */
+.qna-title .title-Area > h2{
+  padding: 50px 0;
+}
+.notice > .container{
+  border-radius: 20px 20px 0 0;
+}
+.notice .board-area{
+  min-height: 380px;
+}
 .notice-search .searchArea form > .search-word.active + span{
   width: 100%;
   flex: 2;
@@ -566,8 +738,20 @@ section[class*="research-"] > .container{
   width: 100%;
 }
 /* 공지사항 - 내용 */
+.noticW-title .title-Area > h2{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.board-body .container{
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
 .board-body .txt-area{
-  min-height: 350px;
+  min-height: 270px;
+}
+/* FAQ 보기 */
+.post-01 .post-area > .faq-summary p{
+  min-height: 355px;
 }
 
 /* contents - 영상모음*/
@@ -593,20 +777,23 @@ section[class*="research-"] > .container{
 .searchArea form > span {
   line-height: 44px;
 }
-.videoZip-03 ul li a > div:nth-of-type(2){
+.videoZip-03 ul li .post-tit{
   width: 100%;
 }
-.videoZip-03 ul li a h4{
+.videoZip-03 ul li .post-tit .zip-Post h4{
   width: 200px;
 }
 /* 영상 포스트 */
 .post-02{
   height: 100%;
 }
-.related-area .sm-list a div p:nth-of-type(2){
+.related-area .sm-list .sm-list-tit div p:nth-of-type(2){
   width: 200px;
 }
 /* 결제완료 영수증 */
+.rc-title .closeBox button span{
+  color: #fff;
+}
 .rc-title .container{
   height: 300px;
   display: flex;
@@ -625,6 +812,16 @@ section[class*="research-"] > .container{
 .rc-Btn a{
   margin: 0 20px;
 }
+.rc-contents div .content {
+  margin-bottom: 60px;
+}
+/* 선물 -결제 완료 영수증 */
+.rcGift-title .container{
+  padding-top: 80px;
+}
+.rcGift-contents div .content{
+  margin-bottom: 20px;
+}
 
 /* 결제 , 환불 */
 /* 결제 내역 */
@@ -636,6 +833,19 @@ section[class*="research-"] > .container{
 }
 .payDetail form{
   height: 100%;
+}
+.payD-form {
+  /* min-height: 540px; */
+}
+/* 결제 환불내역 */
+.payDetail form ul{
+  min-height: 436px;
+}
+.payDetail ul li > p span{
+  /* font-size: 1.125rem; */
+}
+.payDetail ul li > p a{
+  /* font-size: 1.125rem; */
 }
 /* 환불 사유 */
 .reason{
@@ -659,34 +869,59 @@ section[class*="research-"] > .container{
 }
 /* 회원정보 비번 확인 */
 .myinfo-pwd-title .title-Area{
-  padding-top: 90px;
+  padding-top: 0;
 }
 .myinfo-pwd form{
   height: auto;
   border-radius: 20px;
 }
 /* 회원 탈퇴 */
+.leave-title .title-Area > h2{
+  padding: 70px 0 16px;
+}
 .leave-form{
-  height: 100%;
+  border-radius: 20px;
 }
 
 /* 선물 받은 유저 로그인 */
 /* other login */
+.other-title > .container{
+  margin-top: 115px;
+}
 .other-title .title-Area .title-bg{
-  margin-top: 35%;
+  margin-top: 0;
 }
 .other{
   height: 100%;
 }
-.other > .container{
-  max-width: 800px;
-  height: 100%;
-  padding: 20px 40px 40px;
+.other > .container {
+  padding: 40px;
+  height: auto;
+  border-radius: 20px;
 }
-
+.other-login > div a{
+  height: 54px;
+}
 /* 에러 페이지 */
 .error .container{
   max-width: 500px;
+}
+.error .error-info{
+  margin: 150px 0 50px;
+}
+/* 카카오 가입 - 이용약관 */
+.join-policy{
+  /* width: 800px; */
+}
+.join-policy.active{
+  margin: 40px auto;
+}
+.join-policy .policy-content{
+  padding: 30px 40px;
+  margin-top: 50px;
+}
+.join-policy .policy-content h2{
+  font-size: 20px;
 }
 
 
@@ -723,6 +958,7 @@ section[class*="research-"] > .container{
 
 
 
+
 /* iphone X 가로모드 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
   .wrap {
@@ -751,9 +987,6 @@ section[class*="research-"] > .container{
     background-size: 100%;
     background-position: top -170px center;
   }
-  .aboutImg{
-    height:445px;
-  }
   .aboutImg div > span:nth-of-type(1) {
     width: 300px;
     left: 140px;
@@ -765,9 +998,6 @@ section[class*="research-"] > .container{
     width: 200px;
     right: -60px;
   }
-  .aboutText-02 .aboutImg div {
-    background-position: top -340px center;
-  }
   .aboutText-02 .aboutImg {
     height: 600px;
   }
@@ -778,9 +1008,31 @@ section[class*="research-"] > .container{
     right: 190px;
   }
 }
+@media (min-width: 800px){
+  /* about  소개페이지 */
+  /* .imgAni .imgHeart1{
+    left: 235px;
+  }
+  .imgAni .imgHeart2{
+    left: 240px;
+  } */
+  .aboutImg {
+    margin-top: 85px;
+  }
+  .aboutText-02 .aboutImg {
+    height: 42em;
+  }
+  .aboutText-02 .aboutImg div {
+    background-position: top -320px center;
+  }
+}
 @media (min-width: 1024px){
   h2{
     font-size: 1.75rem;
+    line-height: 36px;
+  }
+  h4{
+    font-size: 1.25rem;
   }
   .btn{
     font-size: 18px;
@@ -788,14 +1040,82 @@ section[class*="research-"] > .container{
   .btn_area > button{
     height: 54px;
   }
+  input{
+    font-size: 1.125rem;
+  }
+  input::placeholder{
+    font-size: 1.125rem;
+  }
+  p{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 
   /* 타이틀 */
   .title-Section .title-Area > h2{
     padding: 80px 0 37px;
   }
+  /* 타이틀 2 */
+  .title-Tem .title-Area h2{
+    line-height: 36px;
+  }
+  /* 현금영수증팝업 */
+.cashInfo .contentBox{
+  width: 400px;
+  }
+  .cashInfo .contentBox > .pop-title{
+    font-size: 1.25rem;
+  }
+  .cashInfo .contentBox > .pop-text{
+    font-size: 1.125rem;
+    line-height: 28px;
+  }
+  /* form */
+  .form-area .int_area > h4{
+    font-size: 1.25rem;
+  }
+  .form-area .int_area .sendbox > .btn-send{
+    font-size: 1.125rem;
+  }
+  .form-area .int_area.int01 .sendboxtext{
+    font-size: 1rem;
+  }
+  .form-area .int_area p > span{
+    font-size: 1rem;
+  }
+  .form-area .int_area p{
+    font-size: 1rem;
+  }
+  .form-area .checkBox ul li label{
+    font-size: 1.125rem;
+  }
+  .form-area .checkBox ul li a{
+    font-size: 1rem;
+    width: auto;
+  }
+  /* textarea */
+  textarea::placeholder{
+    font-size: 1.125rem;
+    line-height: 26px;
+  }
+  textarea{
+    font-size: 1.125rem;
+    line-height: 26px !important;
+  }
+  /* about */
+  .about-area p {
+    font-size: 1.125rem;
+    line-height: 26px;
+  }
+  .about-area h2{
+    font-size: 64px;
+  }
+  .about-area .container > div{
+    padding: 40px;
+  }
   .aboutText-01 .container{
     background-size: 100%;
-    background-position: top -230px center;
+    background-position: top -200px center;
   }
   .aboutImg {
     height: 615px;
@@ -811,12 +1131,32 @@ section[class*="research-"] > .container{
     width: 200px;
     right: -60px;
   }
+  .aboutText-01 .lg-text01{
+    font-size: 1.125rem;
+    line-height: 26px;
+    margin-bottom: 72px;
+  }
+  .aboutText-02 .container > div{
+    padding: 0;
+  }
   .aboutText-02 .aboutImg div {
+    height: 790px;
     background-image: url('http://img.assesta.com/AssestaExam/mbtifront/img_about_06.png');
     background-position: top -440px center;
   }
   .aboutText-02 .aboutImg {
     height: 810px;
+  }
+  .aboutText-02 .text-area {
+    position: relative;
+    margin-top: -40px;
+    padding: 0 40px;
+}
+  .about-area .line{
+    margin-bottom: 50px;
+  }
+  .aboutText-03 .about-title h2{
+    line-height: 70px;
   }
   .aboutText-03 .about-title .imgblr:nth-of-type(1) {
     left: 320px;
@@ -824,12 +1164,37 @@ section[class*="research-"] > .container{
   .aboutText-03 .about-title .imgblr:nth-of-type(2) {
     right: 320px;
   }
+  .aboutText-03 .about-title .imgblr{
+    width: 30px;
+  }
+  .aboutText-03 .about-title .imgblr:nth-of-type(1){
+    left: 200px;
+  }
+  .aboutText-03 .about-title .imgblr:nth-of-type(2){
+    right: 200px;
+  }
+  .aboutText-03 .about-title div {
+    width: 140px;
+  }
+  .aboutText-03 h4{
+    font-size: 24px;
+  }
+  .aboutText-03 .about-lastSection .word-01{
+    font-size: 30px;
+  }
+  /* 서비스 */
+  .service{
+    height: 100%;
+  }
+  .service > .container{
+    max-width: 800px;
+  }
   /* 서비스 - 리뷰쓰기 */
   .review {
     margin-top: 117px;
   }
   .review .container, .ask-writing .container {
-    padding: 60px;
+    padding: 40px;
     max-width: 800px;
   }
   .joinF-form .btn_area button{
@@ -837,8 +1202,34 @@ section[class*="research-"] > .container{
     margin: 0 auto;
   }
   /* 마이페이지 */
-  .mypageTitle > .container{
-    background-position: bottom left -55px;
+  .mypage > .container{
+    max-width: 800px;
+    padding: 40px;
+  }
+  .mypage .myInfo-area h2{
+    font-size: 1.75rem;
+  }
+  .mypage .myInfo-area > h2 span {
+    width: 20px;
+  }
+  .mypage .myInfo-area > p:nth-of-type(2){
+    font-size: 1.125rem;
+  }
+  .mypage .myInfo-area > p:nth-of-type(2) span {
+    width: 15px;
+  }
+  .mypage .btn-area > div a p{
+    font-size: 1.125rem;
+  }
+  .mypage .btn-area > div:nth-of-type(2) button{
+    font-size: 1.25rem;
+  }
+  .help-area ul li a{
+    font-size: 1.125rem;
+    height: 54px;
+  }
+  .help-area a{
+    font-size: 1.125rem;
   }
   /* 마이페이지 */
   /* 검사 현황 */
@@ -887,21 +1278,70 @@ section[class*="research-"] > .container{
   .item-available ul li .txtBox, .item-completion ul li .txtBox{
     width: 100%;
   }
+  .txtBox > div button{
+    font-size: 1.125rem !important;
+  }
   .txtBox > div button:first-child{
     height: 40px;
     width: 100%;
     font-size: 1.125rem;
   }
+  .currTabbox .container .item-available > div .no-mbti > div a{
+    font-size: 20px;
+  }
   /* contents - 연구자료 */
   .research-02 >.container{
     padding-top: 0 !important;
+  }
+  /* 연구자료 - 포스트 */
+  .post-title .title-Area > h2{
+    padding: 40px 0;
+  }
+  .post-01 > .container{
+    max-width: 800px;
+  }
+  .post-01 .post-head p{
+    font-size: 1rem;
+  }
+  .post-01 .post-head div button:last-child{
+    width: 24px;
+  }
+  .post-01 .post-area .post-summary p{
+    font-size: 1.125rem;
+    line-height: 26px;
+  }
+  .post-area .post-summary div{
+    font-size: 1.125rem;
+  }
+  .post-area > p{
+    font-size: 1.125rem;
+  }
+  .post-area > button{
+    height: 54px;
+  }
+  .postZip-01 .post-area .post-summary p{
+    font-size: 1.125rem;
+    line-height: 26px;
+  }
+  .post-02 > .container{
+    max-width: 800px;
+  }
+  .related-area .sm-list a div p:nth-of-type(2){
+    font-size: 1.125rem;
+  }
+  .related-area > a{
+    height: 54px;
+  }
+  /* 다운로드 팝업 */
+  .mo-download form p{
+    font-size: 1.125rem;
   }
   /* 포스트 - 유형별 분포표 */
   .post-01 .post-area > div.db-info-02{
     padding-top: 30px;
   }
-  .db-info-02 .table-area{
-    width: 45%;
+  .post-area .db-info-02 .table-area{
+    width: 55%;
     margin: 0 auto;
   }
   .db-info-02 .table-area [class*="table"] {
@@ -914,37 +1354,104 @@ section[class*="research-"] > .container{
     padding: 40px;
     padding-bottom: 24px;
   }
+  .Ziptit h4{
+    font-size: 1.625rem;
+  }
   [class*="videoZip-0"] > .container{
     max-width: 800px;
     padding: 40px;
     padding-top: 0;
   }
+  .videoZip-01 h4{
+    font-size: 1.25rem;
+  }
+  .searchArea form > span:first-child{
+    font-size: 1.125rem;
+  }
   .videoZip-03 ul li a h4{
     max-width: 100%;
+  }
+  .videoZip-03 ul li .post-tit .zip-Post p{
+    font-size: 1rem;
+  }
+  .videoZip-03 ul li .post-tit .zip-Post h4{
+    font-size: 1.125rem;
+  }
+  .related-area .sm-list .sm-list-tit div p:nth-of-type(2){
+    font-size: 1.125rem;
   }
   /* 공지사항 */
   .board-body .container{
     border-radius: 20px;
   }
-  .board-body .txt-area{
-    min-height: 500px;
+  .board-table .board-num span{
+    font-size: 1.25rem;
+    line-height: 40px;
   }
-  /* 큐엔에이 */
+  .board-table .board-tit h4{
+    font-size: 1.125rem;
+  }
+  .board-table .board-tit p{
+    font-size: 1rem;
+  }
+  .board-body a{
+    height: 54px;
+  }
+  .board-body .tit-area p{
+    font-size: 1rem;
+  }
+  .board-body .txt-area p{
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+  .noticW-title .title-Area > h2{
+    padding: 170px 0 60px;
+  }
+  .searchArea form > span .int-word{
+    font-size: 1.125rem;
+  }
+  /* Q&A 큐엔에이 */
+  /* 마이페이지 Q&A 큐엔에이 보기 */
+  .qnaView-title .title-Area > h2{
+    padding: 50px 0;
+  }
   .qnaList > .container{
     max-width: 800px;
   }
+  /* Q&A 큐엔에이 문의하기 */
+  .qna-title .title-Area > h2{
+    padding: 80px 0;
+  }
+  .qna-writing{
+    padding-top: 0 !important;
+  }
+  .ask-content{
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  /* 페이징 */
+  .pagination > div .pageNum, .pagePrev, .pageNext{
+    font-size: 1.25rem;
+  }
+  .pageFirst span, .pagePrev span, .pageNext span, .pageLast span{
+    font-size: 20px;
+  }
   /* 마이 쿠폰 */
   .coupon-title{
-    margin-top: 194px;
+    margin-top: 106px;
   }
   .title-Section > .container{
     max-width: 800px;
   }
   .coupon-title .title-Area-img{
-    padding-bottom:96px
+    padding:140px 0 133px;
   }
   .title-Section .title-Area > div{
     width: 85px;
+  }
+  .coupon-title .title-Area > h2{
+    padding: 0;
   }
   .coupon > .container{
     max-width: 800px;
@@ -961,9 +1468,6 @@ section[class*="research-"] > .container{
   }
   .coupon-code span .int, .coupon-code button{
     height: 100%;
-    font-size: 1.125rem;
-  }
-  .coupon-code span input::placeholder{
     font-size: 1.125rem;
   }
   .coupon-Info ul li .couponImg{
@@ -987,25 +1491,236 @@ section[class*="research-"] > .container{
     right: 17px;
     top: 50px;
   }
+  /* 회원가입 결제, 결제  */
+  .pur-Tab .pur-tabbox div{
+    height: 54px;
+  }
+  .pur-Tab .pur-tabbox div > a{
+    height: inherit;
+    line-height: 54px;
+    font-size: 1.125rem;
+  }
+  .purBox .List-po > h4{
+    font-size: 1.125rem;
+  }
+  .purchase .pur_area .dc-po span{
+    font-size: 1.125rem;
+  }
+  .payment{
+    font-size: 1.125rem;
+  }
+  .join-pur th{
+    font-size: 1.125rem;
+  }
+  .join-pur td{
+    font-size: 1rem;
+  }
+  .join-pur .cach-appbox label{
+    font-size: 1rem;
+  }
+  .join-pur td:last-child > span{
+    font-size: 1rem !important;
+  }
+  .join-pur ul li{
+    font-size: 1rem;
+  }
+  .join-pur h4{
+    font-size: 1rem;
+  }
+  .join-pur p{
+    font-size: 1rem;
+  }
+  .purBox .checkBox ul li label{
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+  .purBox .checkBox ul li label::before{
+    top: 15px;
+  }
+  .purchase form .checkBox input:checked + label::after{
+    top: 16px;
+  }
   /* 결제 환불 내역 */
-  .payDetail form{
-    min-width: 800px;
-    margin: 0 auto;
+  .payDetail > .container{
+    max-width: 800px;
   }
   .payDetail .nbsp{
     min-width: 800px;
     margin: 0 auto;
   }
+  .payDetail ul li > p span{
+    font-size: 1.125rem;
+  }
+  .payDetail ul li > p a{
+    font-size: 1.125rem;
+  }
+  /* 결제 환불내역 */
+  .payDetail form{
+    min-height: ;
+  }
+  .payDetail ul li > div p{
+    font-size: 1.125rem;
+  }
+  .payDetail ul li > div p:nth-of-type(1){
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  /* 결제 환불 상세 내역 */
+  .refund-title .title-Area > h2{
+    padding: 50px;
+  }
+  .refund > .container{
+    max-width: 800px;
+  }
+  .refund form > p span{
+    font-size: 1.125rem;
+  }
+  .refund ul li > div > div h4 span{
+    font-size: 1.125rem;
+  }
+  .payInfo > .container{
+    max-width: 800px;
+    padding: 40px;
+    /* padding-top: 0; */
+  }
+  .payInfo > .container{
+    padding-top: 0;
+  }
+  .refundInfo > .container >div:nth-of-type(1){
+    margin-top: 0;
+  }
+  .payInfo .cashReceipt-area .cash-02 td{
+    font-size: 1.25rem;
+  }
+  .payInfo .cashReceipt-area td{
+    font-size: 1.125rem;
+  }
+  .payInfo .cashReceipt-area .cash-05 td{
+    font-size: 1rem;
+  }
+  .payInfo .cashReceipt-area .cash-03 td {
+    padding-top: 14px;
+  }
+  .payInfo .cashReceipt-area td{
+    padding: 6px;
+  }
+  .payInfo .cashReceipt-area tr:nth-child(n+6):nth-child(-n+9) td:first-child{
+    font-size: 1.125rem;
+    width: 150px;
+  }
+  .payInfo .cashReceipt-area .cash-11 td{
+    font-size: 1.125rem;
+  }
+  .payInfo .cashReceipt-area td:last-child > span{
+    font-size: 1.125rem !important;
+  }
+  .payInfo .cashReceipt-area .cash-05 td:last-child > span{
+    font-size: 1rem !important;
+  }
+  .payInfo button{
+    height: 54px;
+  }
+  .refundInfo p{
+    font-size: 1rem;
+  }
+  .refundInfo ul li{
+    font-size: 1rem;
+  }
+
+  /* 환불 사유 */
+  .reason-title .title-Area > h2{
+    padding: 50px;
+  }
+  .reason > .container{
+    max-width: 800px;
+  }
+  .refund ul li > div > div p:nth-of-type(1){
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  .refund ul li > div > div:nth-of-type(2){
+    height: 90px;
+  }
+  .refund ul li > div > div h4{
+    font-size: 1.25rem;
+  }
+  .refund ul li > div > div p span{
+    font-size: 1.125rem;
+  }
+  .reason-wt .refund-area span{
+    font-size: 1.125rem;
+  }
+  .reason > .container > div{
+    padding: 10px 40px 40px;
+  }
+  .reason > .container > div p:nth-of-type(1){
+    font-size: 1.25rem;
+  }
+  .reason > .container > div p{
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+  .reason-wt textarea::placeholder{
+    font-size: 1.125rem;
+  }
+  .reason-wt .refund-area select {
+    font-size: 1.125rem;
+  }
+  /* 환불 신청 */
+  .app > .container{
+    max-width: 800px;
+  }
+  .app .app-area{
+    padding: 40px;
+  }
+  .app-table td{
+    font-size: 1.125rem;
+  }
+  .app-table .app-ta03 td{
+    font-size: 1rem;
+  }
+  .bankInfo > p{
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+  .app-form .int-area h4{
+    font-size: 1.125rem;
+    width: 85px !important;
+  }
+  .app-area > p, .app-form .int-area .int{
+    font-size: 1.125rem;
+  }
   /* 회원 탈퇴 */
+  .leave-title .title-Area > h2{
+    padding-top: 180px;
+    padding-bottom: 20px;
+  }
+  .leave-title p{
+    line-height: 26px;
+  }
   .leave .container{
     max-width: 800px;
   }
+  .leave{
+    height: 100%;
+  }
+  .leave-form{
+    border-radius: 20px;
+  }
+  .leave-form .checkBox ul li label{
+    font-size: 1.125rem;
+  }
+  .leave-form ul li{
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+  }
   /* 회원정보 비번 확인 */
   .myinfo-pwd-title .title-Area{
-    padding-top: 190px;
+    padding-top: 140px;
   }
   .title-Tem .title-Area p{
     font-size: 1.25rem;
+    line-height: 28px;
   }
   .myinfo-pwd .container{
     max-width: 800px;
@@ -1015,19 +1730,70 @@ section[class*="research-"] > .container{
     border-radius: 20px;
     padding: 40px;
   }
+  /* 회원정보 수정 */
+  .change-form .checkBox ul li label{
+    font-size: 1.125rem;
+  }
   /* 선물 받은 유저 로그인 */
   /* 로그인 other */
+  .other-title {
+    padding-top: 150px;
+  }
   .other > .container{
+    max-width: 800px;
     padding: 40px;
     height: auto;
     border-radius: 20px;
   }
-
-  /* 회원가입 */
+  /* 간편 회원가입 */
   .loginTitle .title-txt h2{
     padding: 80px 0 0;
   }
   .joinF .container{
+    max-width: 800px;
+  }
+  .joinF-form .btn_area:nth-of-type(1) > div > span:nth-of-type(2){
+    font-size: 1.125rem;
+  }
+  /* 회원가입 - sns */
+  .join-sns > .container{
+    background-position: top 80% left 6.125rem;
+  }
+  .join-sns .join-sns > h2{
+    padding-top: 240px;
+  }
+  .join-sns .join-sns > p{
+    padding-bottom: 40px;
+  }
+  .join .container{
+    max-width: 800px;
+  }
+  form.join-sns .checkBox ul{
+    margin: 0;
+  }
+  form.join-sns .checkBox ul li label{
+    font-size: 1.125rem;
+  }
+  form.join-sns .checkBox ul li a{
+    font-size: 1rem;
+    width: 65px;
+  }
+  /* 회원가입 */
+  .join-Title > .container{
+    max-width: 800px;
+  }
+  .emailbox .emial-input-area{
+    font-size: 1.125rem;
+  }
+  .join input[type="radio"] + label{
+    height: 50px;
+    font-size: 1.125rem;
+  }
+  /* 회원가입 후 구매 */
+  .pur-Tab .container{
+    max-width: 800px;
+  }
+  .tabContent section > .container{
     max-width: 800px;
   }
   /* 로그인 */
@@ -1040,9 +1806,195 @@ section[class*="research-"] > .container{
   .login form {
     border-radius: 20px;
   }
-  
-
+  .login form .int-area > ul li > a, .login form .int-area > ul li > label{
+    font-size: 1rem;
+  }
+  .login form .btn_area button + p{
+    font-size: 1.125rem;
+  }
+  /* 로그인 - 비밀번호 찾기 */
+.PWsearch-title > .container{
+  max-width: 800px;
 }
+.PWsearch .container{
+  margin-bottom: 0;
+}
+.PWsearch form{
+  margin-bottom: 0;
+  border-radius: 20px;
+}
+  /* 로그인 - 비빌번호 재설정 */
+  .pwd-title .title-Area h2{
+    /* padding-top: 80px; */
+  }
+  .find .container{
+    max-width: 800px;
+  }
+  .find-form .email-link *{
+    font-size: 1rem;
+  }
+  /* 이메일 찾기 */
+  .E-title .title-Area h2{
+    padding-top: 160px;
+  }
+  /* 이메일 찾기 완료 */
+  .ECon-title .title-Area h2{
+    padding-top: 180px;
+  }
+  /* 결제 완료 영수증 */
+  .rc-title{
+    background-color: #f2f3f7;
+  }
+  .rc-title .closeBox button span{
+    color: #2641e8;
+  }
+  .rc-title .container{
+    justify-content: center;
+    height: auto;
+    padding-top: 160px;
+  }
+  .rc-titleBox h2{
+    color: #2641e8;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+  .rc-titleBox h2 span{
+    font-size: 1.75rem;
+  }
+  .rc-titleBox div span{
+    color: #2641e8;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+  .rc-contents .container{
+    max-width: 800px;
+    padding: 40px;
+  }
+  .rc-contents div h3{
+    font-size: 1.25rem;
+  }
+  .rc-contents div table tr td{
+    font-size: 1.125rem;
+  }
+  .rc-contents div table .item td{
+    font-size: 1rem;
+  }
+  .rc-contents div table tr td:first-of-type{
+    padding: 5px;
+  }
+  .rc-contents .content-1 table tr:last-of-type td{
+    padding: 8px 5px 5px;
+  }
+  .rc-Btn a{
+    width: 100%;
+    margin: 0;
+    height: 54px;
+    line-height: 54px;
+    font-size: 1.125rem;
+  }
+  .rc-Btn a:nth-of-type(2){
+    margin-left: 20px;
+  }
+  /* 선물 -결제 완료 영수증 */
+  .rcGift-title .container{
+    padding-top: 120px;
+  }
+  /* 문의 */
+  .ask-writing{
+    padding-top: 140px;
+  }
+  .ask-content .askType-area li{
+    font-size: 1.125rem;
+  }
+  .ask-content .ask-textBox textarea{
+    height: 290px;
+  }
+  .ask-content .ask-02 button{
+    font-size: 1.125rem;
+    height: 54px;
+  }
+  .askView .ask-view > h4{
+    margin-bottom: 2px;
+  }
+  .ask-comment span, .ask-comment p,.ask-view .view-01 span,.ask-view .view-02 p{
+    font-size: 1.125rem;
+    line-height: 26px;
+  }
+  /* 제품 상세 */
+  .product{
+    margin-top: 106px;
+    padding-top: 60px;
+  }
+  .product .container{
+    max-width: 800px;
+  }
+  .mbtiName div p{
+    font-size: 1.125rem;
+    line-height: 26px;
+  }
+  .mbtiName div p sup{
+    font-size: 0.7rem;
+    top: -5px;
+  }
+  .mbtiName div:nth-of-type(2) p{
+    line-height: 26px;
+  }
+  .order-area .prd-price span, .order-area .listName h4, .sl-list .listPrice > span, .totalTxt span{
+    font-size: 1.125rem;
+  }
+  .order-btn .list-bottom button{
+    font-size: 1.125rem;
+    height: 62px;
+  }
+
+  /* 선물하기 */
+  .pur-Title .container{
+    max-width: 800px;
+  }
+  .buyBox .List-po > h4{
+    font-size: 1.25rem;
+  }
+  .snsnGift .container{
+    max-width: 800px;
+  }
+  .card-area > p,.btn-giftArea p{
+    font-size: 1rem;
+  }
+  .listName .numPM, .listName .T-num{
+    font-size: 1.125rem;
+  }
+  .buyBox .List-po .pur-select ul li .listName p, .listPrice span{
+    font-size: 1.125rem;
+  }
+  .info-area ul li{
+    font-size: 1rem;
+  }
+  /* 검사 제품 상세 */
+  .details-tab .detail-content.show + .btn-area{
+
+    height: 140px;
+  }
+  .order-btn .list-bottom button{
+    font-size: 1.125rem;
+    height: 65px;
+  }
+  /* 메인 */
+  [class*="sc-area"] .container{
+    max-width: 800px;
+    padding:20px  40px;
+  }
+  .txt-area p{
+    font-size: 1.125rem;
+    line-height: 28px;
+  }
+  /* 주문/결제 */
+  .purchase .container{
+    max-width: 800px;
+  }
+} /* 미디어쿼리 1024 끝*/
 @media (max-height: 650px){
   .wrap-con{
     height: auto;
@@ -1090,19 +2042,185 @@ section[class*="research-"] > .container{
   .joinF-form{
     border-radius: 20px 20px 0 0;
   }
-}
-
-/* 아이패드 프로 */
-@media only screen and (min-width: 1024px)and (max-height: 1366px)and (orientation: portrait)and (-webkit-min-device-pixel-ratio: 1.5){
-  .reason > .container > div{
-    height: 319px;
+  /* 회원가입 - sns */
+  form.join-sns{
+    border-radius: 20px 20px 0 0;
   }
+  /* 서비스 */
+  .service{
+    height: auto;
+  }
+  /* 마이페이지 */
+  .mypage > .container{
+    border-radius: 20px 20px 0 0;
+  }
+}
+/* 아이패드 프로 */
+@media only screen and (min-width: 1024px)and (max-height: 1366px)and (orientation: portrait)and (-webkit-min-device-pixel-ratio: 2){
+  /* 헤더 */
+  header{
+    height: 105px;
+  }
+  header > .container{
+    padding: 0 40px;
+    max-width: 100%;
+  }
+  header .gnbBox .logo > div{
+    width: 197px;
+  }
+  header .menu{
+    width: 48px;
+    height: 42px;
+  }
+  header .menu > span{
+    height: 6px;
+  }
+  header .menu > span:nth-of-type(1){
+    width: 48px;
+  }
+  header .menu > span:nth-of-type(1){
+    width: 38px;
+  }
+  header .menu > span:nth-of-type(1){
+    width: 32px;
+  }
+  header .gnbBox > .test > button{
+    width: 132px;
+    height: 50px;
+    font-size: 28px;
+  }
+  header .gnbBox > .test > button img{
+    width: 24px;
+    margin-bottom: 5px;
+  }
+  header .gnbBox > .test > button span{
+    font-size: 22px;
+  }
+  header+section{
+    margin-top: 105px;
+  }
+  .wrapp{
+    margin-top: 105px;
+  }
+  .d-block{
+    display: inline !important;
+  }
+  /* 결제 환불내역 */
+  .payDetail form ul{
+    min-height: 694px;
+  }
+  /* 환불사유 */
+  .reason > .container > div{
+    border-radius: 0 0 20px 20px;
+  }
+  /* 환불쓰기 */
   /* 에러 페이지 */
   .error .error-info{
-    margin: 270px 0 50px;
+    margin: 310px 0 50px;
   }
-  /* 회원가입 */
+  .error .error-txt p{
+    font-size: 1.125rem;
+  }
+  /* 로그인 */
   .loginTitle .title-txt h2{
-    padding-top: 227px;
+    padding-top: 120px;
+  }
+  .loginTitle .title-Area .title-bg{
+    margin-top: 110px;
+  }
+  /* 로그인 -비밀번호 재설정 */
+  .pwd-title .title-Area h2{
+    padding-top: 180px;
+  }
+  /* 로그인 - 비빌번호 재설정 완료 */
+  .resetCon-title .title-Area h2{
+    padding-top: 270px;
+  }
+  .resetCon-title .title-Area p{
+    padding-bottom: 0;
+  }
+  /* 회원가입1 */
+  .joinFTitle .title-txt h2{
+    padding-top: 140px;
+  }
+  /* 메인 */
+  .sc-area-01{
+    margin-top: 105px;
+  }
+  /* about 소개 */
+  .aboutImg{
+    margin-top: 65px;
+  }
+  /* 마이페이지 */
+  .mypageTitle .container {
+    margin-top: 60px;
+  }
+  .mypage > .container{
+    border-radius: 20px;
+  }
+  /* 결제 영수증 */
+  .rc-contents{
+    padding-bottom: 8.6rem;
+  }
+  /* 큐엔에이 목룍 */
+  .qnaList .board-area{
+    min-height: 641px;
+  }
+  /* 공지사항 목록 */
+  .notice .board-area{
+    min-height: 575px;
+  }
+  /* FAQ 보기 */
+  .PN-post .post-area >div a{
+    font-size: 1rem;
+  }
+  /* 마이쿠폰 */
+  .coupon .coupon-Info{
+    min-height: 426px;
+  }
+  /* 제품상세 */
+  .details-tab .detail-content{
+    height: 1320px;
+  }
+  .details-tab > .detail-wrap .btn-area{
+    height: 170px;
+  }
+  .details-tab > .detail-wrap .btn-area > div{
+    padding: 170px 40px 40px;
+    bottom: 170px;
+  }
+  .details-tab > .detail-wrap .btn-area > div button{
+    margin: 0 40px;
+    top: 250px;
+  }
+  .details-tab .detail-content.show + .btn-area > div{
+    padding: 90px 20px 50px;
+  }
+  .details-tab .detail-content.show + .btn-area > div button{
+    top: 210px;
+  }
+}/* 아이패드 프로 끝*/
+/* 갤럭시 탭  */
+@media only screen and (min-device-height: 1280px) and (max-device-height: 1280px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1){
+  .PWsearch form{
+    border-radius: 20px;
+  }
+  .mypage > .container{
+    border-radius: 20px;
+  }
+}
+/* 갤럭시 탭 800이상 */
+@media only screen and (min-height: 1400px)and (max-height: 1400px)and (orientation: portrait)and (-webkit-max-device-pixel-ratio: 2){
+  .loginTitle .title-txt h2{
+    padding-top: 120px;
+  }
+  .PWsearch form{
+    border-radius: 20px;
+  }
+  .mypageTitle .join-titleBox > h2{
+    padding-top: 140px;
+  }
+  .mypage > .container{
+    border-radius: 20px;
   }
 }
