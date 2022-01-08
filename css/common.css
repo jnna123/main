@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined");
 @font-face {
   font-family: "Handon3gyeopsal300g";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff")
@@ -19,6 +20,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
 
 /* 공통 */
 *,
@@ -237,7 +240,7 @@ header .gnbBox > .test > button {
   background-color: #2641E8;
   border-radius: 8px;
   font-size: 14px;
-  font-family: "Handon3gyeopsal600g";
+  font-family: "Handon3gyeopsal300g";
   /* font-weight: 600; */
   line-height: 17px;
   border: none;
@@ -484,6 +487,7 @@ footer p span{
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 51;
 }
 .loading {
   position: absolute;
@@ -585,7 +589,7 @@ footer p span{
   /* font-weight: 600; */
 }
 .btn-confi {
-  width: 280px;
+  width: 100%;
   height: 40px;
 }
 .modal .contentBox > .modal-imgbox {
@@ -593,11 +597,18 @@ footer p span{
   justify-content: center;
   margin-top: 28px;
 }
-
-
+.btn-confi-ok {
+  width: 100%;
+  height: 40px;
+  margin-left: 10px;
+}
+.btn-confi-cancel {
+  width: 100%;
+  height: 40px;
+}
 /* 팝업이미지 1 */
 .modal .contentBox > .modal-imgbox.logoutImg > div:nth-of-type(1) {
-  width: 29px;
+    width: 29px;
 }
 .modal .contentBox > .modal-imgbox.logoutImg > div:nth-of-type(2) {
   width: 69px;
@@ -776,7 +787,9 @@ tr{
 header+section{
   margin-top: 72px;
 }
-
+.wrapping{
+  margin-top: 72px;
+}
 
 /* 버튼효과 */
 header .gnbBox > .test > button:active{
