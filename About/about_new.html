@@ -422,7 +422,7 @@
                 <div class="line"></div>
                 <div>
                     <div class="aboutImg">
-                        <div></div>
+                        <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img_about_bg02.jpg" alt="초록들판의 돗자리 위의 두사람과 두개의 자전거"></div>
                     </div>
                 </div>
                 <div class="text-area">
@@ -437,7 +437,7 @@
             <div class="container">
                 <div class="upImg">
                     <div class="line"></div>
-                    <div class="about-title a-txtAni">
+                    <div class="about-title a-txtAni aboutImg">
                         <div class="imgblr"><img src="http://img.assesta.com/AssestaExam/mbtifront/img_Pop_03_L.png" alt="깜빡이"></div>
                         <div class="imgblr"><img src="http://img.assesta.com/AssestaExam/mbtifront/img_Pop_03_R.png" alt="깜빡이"></div>
                         <h2 class="text-01Ani"><span class="txtAni01">발</span><span class="txtAni02">견</span><span class="txtAni03">하면</span><br><span class="txtAni04">달</span><span class="txtAni05">라집니다</span></h2>
@@ -506,18 +506,6 @@
         $('.aboutImg').each(function(){
             var aboutImg = $(this);
             var imgHalf = aboutImg.offset().top + aboutImg.outerHeight();
-
-            console.log('포지션 ' + imgHalf)
-
-            if(imgHalf < winbottom) {
-                // play.animate({'opacity':'1'},500);
-                aboutImg.addClass('show');            
-            }
-        });
-
-        $('.upImg').each(function(){
-            var aboutImg = $(this);
-            var imgHalf = aboutImg.offset().top + aboutImg.outerHeight() / 2;
 
             console.log('포지션 ' + imgHalf)
 
