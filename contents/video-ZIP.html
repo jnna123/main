@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBTI 사람의 발견</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../css/reset.css" >
     <link rel="stylesheet" type="text/css" href="../css/common.css" >
 
@@ -19,6 +18,7 @@
 </head>
 <body>
 <div class="wrap">
+
 
     <!-- 헤더 -->
     <header id="gnbNav">
@@ -35,15 +35,15 @@
                 </div>
                 <div class="logo"><div><img src="http://img.assesta.com/AssestaExam/mbtifront/logo.gif" alt="사람의발견 로고"></div></div>
                 <!-- 로그인 전 버튼 -->
-                <!-- <div class="test"><button type="button" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div> -->
+                <div class="test"><button type="button" onclick="location.href='login.html';" class="btn">LOGIN <span>▶</span></button></div>
                 <!-- 로그인 후 버튼 -->
-                <div class="goMy"><button type="button" class="btn-my"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_mygo.png" alt="사람 아이콘"></button></div>
+                <div class="test" style="display: none;"><button type="button" onclick="location.href='mypage.html';" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
 
             </nav>
         </div>
         <div class="dim-area">
             <div class="sideBox">
-                <button type="button" class="btn-close"><span></span></button>
+                <button type="button" class=" btn-close menu-close"><span></span></button>
                 <div class="sidebar">
                     <!-- 로그인 전 상태 -->
                     <div class="side-user userLogout" style="display: none;">
@@ -67,7 +67,7 @@
                             <a href="#">Service</a>
                             <ul class="smallMenu">
                                 <li><a href="#">자기의 발견 1</a></li>
-                                <li><a href="#">자기의 발견 2</a></li>
+                                <!-- <li><a href="#">자기의 발견 2</a></li> -->
                             </ul>
                         </li>
                         <li>
@@ -92,8 +92,6 @@
         </div>
     
     </header>
-
-
     <!-- content -->
     <section class="title-Section">
         <div class="container">
@@ -129,15 +127,14 @@
                     <div>
                         <h4>추천</h4>
                         <div class="rc-Area">
-                            <!-- <div><img src="" alt="임시"></div> -->
-                            <div class="videoZip-area"> 
-                                <!-- <video controls playsinline poster="" width="100%" height="152px">
-                                    <source src="" type="video/mp4">
-                                    <strong>브라우저가 비디오 태그를 지원하지 않습니다..</strong>
-                                </video> -->
-                            </div>
-                            <h4 class="tit">MBTI 유형별 코로나블루 극복 팁</h4>
-                            <p>2021.00.00</p>
+                            <a href="Zip-tip-num1_EI.html">
+                                <div class="videoZip-area"> 
+                                    <!-- <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sZe-Qbe-Q3I?playsinline=1&enablejsapi=1"></iframe> -->
+                                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/tip_EI_thumbnail.png" alt="E와 I의 커뮤니케이션 비디오 썸네일 "></div>
+                                </div>
+                                <h4 class="tit">E와 I의 커뮤니케이션</h4>
+                                <!-- <p>2021.00.00</p> -->
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -145,12 +142,12 @@
             <section class="videoZip-02">
                 <div class="container">
                     <div class="zip-listSearch">
-                        <h4>영상 <span>(총 000건)</span></h4>
+                        <h4>영상 <span>(총 5건)</span></h4>
                         <div class="searchArea">
                             <form onsubmit="return false">
                                 <span class="int-area search-align">
-                                    <label for="align"></label>
-                                    <select id="align" class="int int-align">
+                                    <label for="align-tip"></label>
+                                    <select id="align-tip" class="int int-align">
                                         <option value="최신순">최신순</option>
                                         <option value="인기순">인기순</option>
                                     </select>
@@ -175,84 +172,80 @@
                         <ul class="search-before">
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 꿀팁</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-tip-num1_EI.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/tip_EI_thumbnail.png" alt="E와 I의 커뮤니케이션 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 꿀팁</p>
+                                                <h4>E와 I의 커뮤니케이션</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 꿀팁</p>
-                                            <h4>2021 MBTI 유형분포표 분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-tip-num1_SN.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/tip_SN_thumbnail.png" alt="S와 N의 커뮤니케이션 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 꿀팁</p>
+                                                <h4>S와 N의 커뮤니케이션</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 꿀팁</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-tip-num1_TF.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/tip_TF_thumbnail.png" alt="T와 F의 커뮤니케이션 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 꿀팁</p>
+                                                <h4>T와 F의 커뮤니케이션</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 꿀팁</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-tip-num1_JP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/tip_JP_thumbnail.png" alt="J와 P의 커뮤니케이션 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 꿀팁</p>
+                                                <h4>J와 P의 커뮤니케이션</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 꿀팁</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-tip-num1_covide.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/tip_covid_thumbnai.jpg" alt="코로나 블루 극복 방법 비디오 썸네일 "></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="post-list">
-                                <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 꿀팁</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 꿀팁</p>
+                                                <h4>MBTI 유형별 코로나 블루 극복 방법</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
@@ -286,7 +279,8 @@
                                         <p>한국 MBTI 유형 분포 현황 <mark class="highlight">메타</mark> 아러제공해드 유형분포에 대한 전문적인 자료를 제공해드립니다. 대한민국의 MBTI 유형분포에 대한 전문적인 자료 대한민국의 MBTI 유형분포에 대한 전문적인 자료 대한민국의 MBTI 유형분포에 대한 전문적인 자료</p>
                                     </div>
                                 </a>
-                            </li>                    <li class="post-list">
+                            </li>                    
+                            <li class="post-list">
                                 <a href="research_post_01.html">
                                     <div><img src="" alt="임시"></div>
                                     <div>
@@ -297,16 +291,20 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="pagination">
+                    <div class="pagination" style="display: none;">
                         <div>
+                            <span class="pageFirst"><span class="material-icons-outlined">first_page</span></span>
                             <span class="pagePrev"><span class="material-icons-outlined">chevron_left</span></span>
-                            <span class="pageNum active">1</span>
-                            <span class="pageNum">2</span>
-                            <span class="pageNum">3</span>
-                            <span class="pageNum">4</span>
-                            <span class="pageNum">5</span>
-                            <span class="pageNum">6</span>
+                            <ol>
+                                <li><span class="pageNum active">1</span></li>
+                                <li><span class="pageNum">2</span></li>
+                                <li><span class="pageNum">3</span></li>
+                                <li><span class="pageNum">4</span></li>
+                                <li><span class="pageNum">5</span></li>
+                                <li><span class="pageNum">666</span></li>
+                            </ol>
                             <span class="pageNext"><span class="material-icons-outlined">chevron_right</span></span>
+                            <span class="pageLast"><span class="material-icons-outlined">last_page</span></span>
                         </div>
                     </div>
                 </div>
@@ -318,12 +316,14 @@
                     <div>
                         <h4>추천</h4>
                         <div class="rc-Area">
-                            <!-- <div><img src="" alt="임시"></div> -->
-                            <div class="videoZip-area"> 
-                                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/GoPonVIfXEA?playsinline=1&enablejsapi=1"></iframe>
-                            </div>
-                            <h4 class="tit">ESTJ 플리, 일하기 전 몸 좀 풀어볼까? 일잘러 엣티제를 위한 노동요</h4>
-                            <p>2021.00.00</p>
+                            <a href="Zip-playlist-num1_ESTJ.html">
+                                <div class="videoZip-area"> 
+                                    <!-- <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sZe-Qbe-Q3I?playsinline=1&enablejsapi=1"></iframe> -->
+                                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_estj_thumbnail.png" alt="E와 I의 커뮤니케이션 비디오 썸네일 "></div>
+                                </div>
+                                <h4 class="tit">ESTJ 플리, 일하기 전 몸 좀 풀어볼까? 일잘러 엣티제를 위한 노동요</h4>
+                                <!-- <p>2021.00.00</p> -->
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -331,12 +331,12 @@
             <section class="videoZip-02">
                 <div class="container">
                     <div class="zip-listSearch">
-                        <h4>영상 <span>(총 000건)</span></h4>
+                        <h4>영상 <span>(총 10건)</span></h4>
                         <div class="searchArea">
                             <form onsubmit="return false">
                                 <span class="int-area search-align">
-                                    <label for="align"></label>
-                                    <select id="align" class="int int-align">
+                                    <label for="align-play"></label>
+                                    <select id="align-play" class="int int-align">
                                         <option value="최신순">최신순</option>
                                         <option value="인기순">인기순</option>
                                     </select>
@@ -361,84 +361,192 @@
                         <ul class="search-before">
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/GoPonVIfXEA?playsinline=1&enablejsapi=1"></iframe>
-                                    </div>
-                                    <a href="Zip-playlist-num1.html">
-                                        <div class="zip-Post">
-                                            <p>MBTI 플레이리스트</p>
-                                            <h4>ESTJ 플리, 일하기 전 몸 좀 풀어볼까? 일잘러 엣티제를 위한 노동요</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-playlist-num1_ESTJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_estj_thumbnail.png" alt="ESTJ 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>ESTJ 플리, 일하기 전 몸 좀 풀어볼까? 일잘러 엣티제를 위한 노동요</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="Zip-playlist-num1.html">
-                                        <div class="zip-Post">
-                                            <p>MBTI 플레이리스트</p>
-                                            <h4>플리, 일하기 전 몸 좀 풀어볼까? 일잘러 엣티제를 위한 노동요</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-playlist-num1_INFJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_infj_thumbnail.png" alt="ESTJ 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>INFJ 플리, 비 내리는 새벽 잠 못드는 인프제를 위한 감성 플리</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 플레이리스트</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-playlist-num1_INTJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_intj_thumbnail.png" alt="INTJ 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>INTJ 플리, 완벽한 우리에게 가사는 중요하지 않아</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 플레이리스트</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-playlist-num1_ENTJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_entj_thumbnail.png" alt="ENTJ 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>ENTJ 플리, 야망으로 빌딩 세우는 엔티제 플리</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list" style="display: none;">
+                                <div>
+                                    <a href="Zip-playlist-num1_ENFP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_enfp_thumbnail.png" alt="ENFP 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>ENFP 플리, 쉴 틈 없이 신나 그게 엔프피니까</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list" style="display: none;">
+                                <div>
+                                    <a href="Zip-playlist-num1_ESTP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_estp_thumbnail.png" alt="ESTP 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>ESTP 플리, 지루한 건 견딜 수 없어. 엣팁를 위한 뿡빵뿡송</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 플레이리스트</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-playlist-num1_INTP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_intp_thumbnail.png" alt="INTP 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>INTP 귀차니즘 인팁을 위해 모아 본 플리, 신나지만 너무 신나면 안돼!</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 플레이리스트</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-playlist-num1_ISTP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_istp_thumbnail.png" alt="ISTP 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>ISTP 플리, 차분한 잇팁도 그루브 타게 만들 힙한 플리</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-playlist-num1_INFP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_infp_thumbnail.png" alt="INFP 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>INFP 플리, 또 나만 진심이지? 과몰입 장인 '인프피' 플리</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-playlist-num1_ISFJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_isfj_thumbnail.png" alt="ISFJ 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>ISFJ 플리, 잇프제를 위로하는 그때 그 시절 노래</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-playlist-num1_ISFP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_isfp_thumbnail.png" alt="ISFP 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>ISFP 플리,착한 아이 잇프피를 위한 감성 플리</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-playlist-num1_ISTJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/playlist_istj_thumbnail.png" alt="ISTJ 플레이리스트 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 플레이리스트</p>
+                                                <h4>ISTJ 플리, 잇티제는 (뚠뚠) 오늘도 (뚠뚠) 성실히 살아가네💼</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
@@ -483,7 +591,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="pagination">
+                    <div class="pagination" style="display: none;">
                         <div>
                             <span class="pagePrev"><span class="material-icons-outlined">chevron_left</span></span>
                             <span class="pageNum active">1</span>
@@ -504,12 +612,14 @@
                     <div>
                         <h4>추천</h4>
                         <div class="rc-Area">
-                            <!-- <div><img src="" alt="임시"></div> -->
-                            <div class="videoZip-area"> 
-                                <iframe width="100%" height="auto" src=""></iframe>
-                            </div>
-                            <h4 class="tit">MBTI 유형별 코로나블루 극복 팁</h4>
-                            <p>2021.00.00</p>
+                            <a href="Zip-story-num1_INTJ.html">
+                                <div class="videoZip-area"> 
+                                    <!-- <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sZe-Qbe-Q3I?playsinline=1&enablejsapi=1"></iframe> -->
+                                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_intj_thumbnail.png" alt="INTJ 유형 특 썸네일 "></div>
+                                </div>
+                                <h4 class="tit">INTJ 유형 특</h4>
+                                <!-- <p>2021.00.00</p> -->
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -517,12 +627,12 @@
             <section class="videoZip-02">
                 <div class="container">
                     <div class="zip-listSearch">
-                        <h4>영상 <span>(총 000건)</span></h4>
+                        <h4>영상 <span>(총 17건)</span></h4>
                         <div class="searchArea">
                             <form onsubmit="return false">
                                 <span class="int-area search-align">
-                                    <label for="align"></label>
-                                    <select id="align" class="int int-align">
+                                    <label for="align-story"></label>
+                                    <select id="align-story" class="int int-align">
                                         <option value="최신순">최신순</option>
                                         <option value="인기순">인기순</option>
                                     </select>
@@ -547,84 +657,272 @@
                         <ul class="search-before">
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 스토리</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-story-num1_INTJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_intj_thumbnail.png" alt="INTJ 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>INTJ 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 스토리</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-story-num1_ENFP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_enfp_thumbnail.png" alt="ENFP 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ENFP 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 스토리</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-story-num1_INFJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_infj_thumbnail.png" alt="INFJ 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>INFJ 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 스토리</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-story-num1_ESFJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_esfj_thumbnail.png" alt="ESFJ 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ESFJ 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 스토리</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-story-num1_ISFP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_isfp_thumbnail.png" alt="ISFP 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ISFP 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 스토리</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-story-num1_ENTJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_entj_thumbnail.png" alt="ENTJ 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ENTJ 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_INFP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_infp_thumbnail.png" alt="INFP 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>INFP 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_ESFP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_esfp_thumbnail.png" alt="ESFP 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ESFP 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_ENTP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_entp_thumbnail.png" alt="ENTP 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ENTP 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_ISTP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_istp_thumbnail.png" alt="ISTP 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ISTP 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_ENFJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_enfj_thumbnail.png" alt="ENFJ 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ENFJ 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_INTP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_intp_thumbnail.png" alt="INTP 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>INTP 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_ESTP.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_estp_thumbnail.png" alt="ESTP 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ESTP 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_ISTJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_istj_thumbnail.png" alt="ISTJ 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ISTJ 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_ESTJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_estj_thumbnail.png" alt="ESTJ 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ESTJ 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_ISFJ.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_isfj_thumbnail.png" alt="ISFJ 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>ISFJ 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-story-num1_typeReview.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_typereview_thumbnail.png" alt="후기편 유형 특 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 스토리</p>
+                                                <h4>후기편 유형 특</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
@@ -669,7 +967,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="pagination">
+                    <div class="pagination" style="display: none;">
                         <div>
                             <span class="pagePrev"><span class="material-icons-outlined">chevron_left</span></span>
                             <span class="pageNum active">1</span>
@@ -690,12 +988,14 @@
                     <div>
                         <h4>추천</h4>
                         <div class="rc-Area">
-                            <!-- <div><img src="" alt="임시"></div> -->
-                            <div class="videoZip-area"> 
-                                <iframe width="100%" height="auto" src=""></iframe>
-                            </div>
-                            <h4 class="tit">MBTI 유형별 코로나블루 극복 팁</h4>
-                            <p>2021.00.00</p>
+                            <a href="Zip-learn-num1_10.html">
+                                <div class="videoZip-area"> 
+                                    <!-- <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sZe-Qbe-Q3I?playsinline=1&enablejsapi=1"></iframe> -->
+                                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_10_thumbnail.png" alt="2021 최신 한국인의 'MBTI 유형분포표' 볼 수 있는 방법은?! 비디오 썸네일 "></div>
+                                </div>
+                                <h4 class="tit">2021 최신 한국인의 'MBTI 유형분포표' 볼 수 있는 방법은?!</h4>
+                                <!-- <p>2021.00.00</p> -->
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -703,12 +1003,12 @@
             <section class="videoZip-02">
                 <div class="container">
                     <div class="zip-listSearch">
-                        <h4>영상 <span>(총 000건)</span></h4>
+                        <h4>영상 <span>(총 13건)</span></h4>
                         <div class="searchArea">
                             <form onsubmit="return false">
                                 <span class="int-area search-align">
-                                    <label for="align"></label>
-                                    <select id="align" class="int int-align">
+                                    <label for="align-learn"></label>
+                                    <select id="align-learn" class="int int-align">
                                         <option value="최신순">최신순</option>
                                         <option value="인기순">인기순</option>
                                     </select>
@@ -733,84 +1033,208 @@
                         <ul class="search-before">
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 알고가기</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-learn-num1_12.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_12_thumbnail.png" alt="구독자분께 '정식 MBTI 검사'해드렸습니다! (Feat. 최적유형 찾기) 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>구독자분께 '정식 MBTI 검사'해드렸습니다! (Feat. 최적유형 찾기)</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 알고가기</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-learn-num1_11.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_11_thumbnail.png" alt="4일 만에 'MBTI 전문가' 되는 방법 (feat. 전 세계에서 쓸 수 있음) 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>4일 만에 'MBTI 전문가' 되는 방법 (feat. 전 세계에서 쓸 수 있음)</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 알고가기</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-learn-num1_10.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_10_thumbnail.png" alt="2021 최신 한국인의 'MBTI 유형분포표' 볼 수 있는 방법은?! 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>2021 최신 한국인의 'MBTI 유형분포표' 볼 수 있는 방법은?!</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 알고가기</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-learn-num1_13.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_13_thumbnail.png" alt="인기 아이돌 가수가 MBTI 정식검사를 받는다면!(Feat.세삼) 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>인기 아이돌 가수가 MBTI 정식검사를 받는다면!(Feat.세삼)</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 알고가기</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-learn-num1_09.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_09_thumbnail.jpg" alt="MBTI결과가 나의 진짜 유형이 아니라고??!!(Feat.최적유형) 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>MBTI결과가 나의 진짜 유형이 아니라고??!!(Feat.최적유형)</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li class="post-list">
                                 <div>
-                                    <div class="smallZip-area">
-                                        <iframe width="100%" height="auto" src=""></iframe>
-                                    </div>
-                                    <a href="">
-                                        <div class="zip-Post">
-                                            <p>MBTI 알고가기</p>
-                                            <h4>2021 MBTI 유형분포표</h4>
-                                            <p>2021.11.09</p>
+                                    <a href="Zip-learn-num1_08.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_08_thumbnail.png" alt="MBTI 선호지표로 알 수 있는 내가 가진 심리적 선호는 뭘까?! 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>MBTI 선호지표로 알 수 있는 내가 가진 심리적 선호는 뭘까?!😮</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-learn-num1_07.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_07_thumbnail.png" alt="MBTI는 어떻게 만들어 졌을까? 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>무료성격유형검사는 올바른 검사일까요?! MBTI에 기초가 된 이론은 무엇일까요? "MBTI는 어떻게 만들어 졌을까?" 에 대해 알아보았습니다!🧐</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-learn-num1_01.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_01_thumbnail.jpg" alt="MBTI 문항이 '과학적'으로 증명된 이유 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>MBTI 문항이 '과학적'으로 증명된 이유</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-learn-num1_03.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_03_thumbnail.png" alt="사람을 16가지로 나눌 수 있을까? 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>사람을 16가지로 나눌 수 있을까?</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-learn-num1_04.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_04_thumbnail.png" alt="방송에 나오는 MBTI 검사, 가짜입니다 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>방송에 나오는 MBTI 검사, 가짜입니다</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-learn-num1_05.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_05_thumbnail.png" alt="MBTI 같은 성격 유형인데도 왜 성격이 다를까? 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>MBTI 같은 성격 유형인데도 왜 성격이 다를까?</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-learn-num1_02.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_02_thumbnail.png" alt="아직도 MBTI 무료검사를 사용하고 계신가요? 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>아직도 MBTI 무료검사를 사용하고 계신가요?</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="post-list">
+                                <div>
+                                    <a href="Zip-learn-num1_06.html">
+                                        <div class="smallZip-area">
+                                            <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/learn_06_thumbnail.png" alt="MBTI에서 E와 I의 결정적 차이는 '이것'입니다 비디오 썸네일 "></div>
+                                        </div>
+                                        <div class="post-tit">
+                                            <div class="zip-Post">
+                                                <p>MBTI 알고가기</p>
+                                                <h4>MBTI에서 E와 I의 결정적 차이는 '이것'입니다</h4>
+                                                <!-- <p>2021.11.09</p> -->
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
@@ -855,7 +1279,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="pagination">
+                    <div class="pagination" style="display: none;">
                         <div>
                             <span class="pagePrev"><span class="material-icons-outlined">chevron_left</span></span>
                             <span class="pageNum active">1</span>
@@ -907,23 +1331,35 @@
 <script src="../js/script.js"></script>
 <script>
     $(document).ready(function(){
-        // 탭
+        // 영상모음 탭
         let tabName = $('.tab-menu > a');
         let tabContent = $('.tabContent > div');
         let tabTitle = $('.Ziptit > h4')
+        let tabLink = $('.related-area > a');
+        let thisURL = location.href;
         tabName.click(function(e){
             e.preventDefault();
-            tabName.removeClass('active');
-            $(this).addClass('active');
             let tabIndex = $(this).index();
             activeTitle(tabIndex);
             activeTab(tabIndex);
         });
+
+        tabName.each(function(i){
+            let currURL = $(this).attr('href');
+            let active = thisURL.indexOf(currURL);
+            console.log(active);
+            if(active > -1){
+                activeTab(i);
+            }
+        })
+
         function activeTitle(idx){
             tabTitle.hide();
             tabTitle.eq(idx).show();
         }
         function activeTab(idx){
+            tabName.removeClass('active');
+            tabName.eq(idx).addClass('active');
             tabContent.hide();
             tabContent.find('.word').html('');
             tabContent.find('.int-search').val('');

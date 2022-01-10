@@ -18,16 +18,6 @@
 </head>
 <body>
 <div class="wrap">
-    <!-- 공용 팝업 -->
-    <div class="modal public" style="display: none;">
-        <div class="mo-dim"></div>
-        <div class="modal-body">
-            <div class="contentBox">
-                <p class="pop-text">텍스트 영역입니다</p>
-                <button type="button" class="btn btn-confi">확인</button>
-            </div>
-        </div>
-    </div>
 
     <!-- 헤더 -->
     <header id="gnbNav">
@@ -44,15 +34,15 @@
                 </div>
                 <div class="logo"><div><img src="http://img.assesta.com/AssestaExam/mbtifront/logo.gif" alt="사람의발견 로고"></div></div>
                 <!-- 로그인 전 버튼 -->
-                <div class="test"><button type="button" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
+                <div class="test"><button type="button" onclick="location.href='login.html';" class="btn">LOGIN <span>▶</span></button></div>
                 <!-- 로그인 후 버튼 -->
-                <!-- <div class="goMy"><button type="button" class="btn-my"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_mygo.png" alt="사람 아이콘"></button></div> -->
+                <div class="test" style="display: none;"><button type="button" onclick="location.href='mypage.html';" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
 
             </nav>
         </div>
         <div class="dim-area">
             <div class="sideBox">
-                <button type="button" class="btn-close"><span></span></button>
+                <button type="button" class=" btn-close menu-close"><span></span></button>
                 <div class="sidebar">
                     <!-- 로그인 전 상태 -->
                     <div class="side-user userLogout" style="display: none;">
@@ -76,7 +66,7 @@
                             <a href="#">Service</a>
                             <ul class="smallMenu">
                                 <li><a href="#">자기의 발견 1</a></li>
-                                <li><a href="#">자기의 발견 2</a></li>
+                                <!-- <li><a href="#">자기의 발견 2</a></li> -->
                             </ul>
                         </li>
                         <li>
@@ -101,40 +91,93 @@
         </div>
     
     </header>
+
     <!-- content -->
-    <section class="title-Section qna-title">
-        <div class="container" style="background: none;">
+    <section class="title-Section post-title">
+        <div class="container">
             <div class="title-Area">
-                <h2>Q&A</h2>
+                <h2>영상모음.ZIP</h2>
+            </div>
+        </div>
+    </section>
+    <section class="post-01 postZip-01">
+        <div class="container">
+            <h4 class="post-tit">ESFJ 유형 특</h4>
+            <div class="post-head">
+                <p><strong>View&nbsp;&nbsp;</strong><span>2,141</span></p>
+                <div>
+                    <!-- <button class="bookmark" st><img src="http://img.assesta.com/AssestaExam/mbtifront/img_bookmark_off.png" alt="북마크off 아이콘"></button> -->
+                    <button class="share"><img src="http://img.assesta.com/AssestaExam/mbtifront/share.png" alt="공유 아이콘"></button>
+                </div>
+            </div>
+            <div class="post-area">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/lbXmf4ncduM?playsinline=1&enablejsapi=1"></iframe>
+                </div>
+                <div class="post-summary ">
+                    <p><span>대한민국 유일무이 정식 MBTI 보급 기관 어세스타가 준비한~<br>
+                        MBTI 유형 특징 1분 순삭🎬</span><br><br>
+                        자신을 이해하고, 타인을 이해하기 위한 한 발짝,,, 두 발짝,,, 👣👣<br>어세스타 MBTI 유형 특징 영상을 보고 함께 나아가요!<br>'겉따 속뜨 온천 재질 ESFJ'의 특징 지금 바로 보시죠!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="post-02">
+        <div class="container">
+            <div class="related-area">
+                <h4>관련 영상</h4>
+                <div class="related-con">
+                    <div>
+                        <div class="sm-list related-01">
+                            <a href="Zip-story-num1_ISFP.html">
+                                <div class="smallZip-area">
+                                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_isfp_thumbnail.png" alt="ISFP 유형 특 썸네일 "></div>
+                                </div>
+                                <div class="sm-list-tit">
+                                    <div>
+                                        <p>MBTI 스토리</p>
+                                        <p>ISFP 유형 특</p>
+                                        <!-- <p>2021.00.00</p> -->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sm-list related-02">
+                            <a href="Zip-story-num1_ENTJ.html">
+                                <div class="smallZip-area">
+                                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_entj_thumbnail.png" alt="ENTJ 유형 특 썸네일 "></div>
+                                </div>
+                                <div class="sm-list-tit">
+                                    <div>
+                                        <p>MBTI 스토리</p>
+                                        <p>ENTJ 유형 특</p>
+                                        <!-- <p>2021.00.00</p> -->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sm-list related-03">
+                            <a href="Zip-story-num1_INFP.html">
+                                <div class="smallZip-area">
+                                    <div><img src="http://img.assesta.com/AssestaExam/mbtifront/video/thumbnail/story_infp_thumbnail.png" alt="INFP 유형 특 썸네일 "></div>
+                                </div>
+                                <div class="sm-list-tit">
+                                    <div>
+                                        <p>MBTI 스토리</p>
+                                        <p>INFP 유형 특</p>
+                                        <!-- <p>2021.00.00</p> -->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="video-ZIP.html#story" class="btn btn-link">목록</a>
             </div>
         </div>
     </section>
     
-        <section>
-            <div class="ask-content">
-                <div>
-                    <h2>문의하기</h2>
-                    <div class="ask-01">
-                        <h4>문의 유형</h4>
-                        <div class="askType-area">
-                            <ul>
-                                <li class="ask-type type-goods active">검사<i></i></li><li class="ask-type type-payment">결제<i></i></li><li class="ask-type type-refund">환불<i></i></li><li class="ask-type type-etc">기타</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="ask-02">
-                        <h4>문의 내용</h4>
-                        <div class="ask-textBox">
-                            <textarea class="A-textBox" placeholder="문의 내용을 입력해주세요.&#10;주문 번호를 적어주시면 더 빠른 답변이 가능합니다."></textarea>
-                        </div>
-                        <!-- <p>문의내용에 대한 답변은 '마이페이지 > 마이메뉴 > 내 게시물 관리'에서 쉽게 확인하실 수 있습니다.</p> -->
-                        <button type="submit" class="btn btn-send">문의하기</button>
-                        <!-- 수정버튼 -->
-                        <button type="submit" class="btn btn-send" style="display:none">수정하기</button>
-                    </div>
-                </div>
-            </div>
-        </section>
     <!-- footer -->
     <footer>
         <div class="container">
@@ -165,12 +208,31 @@
             <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>
         </div>
     </footer>
-    
-
-
 </div>
 
 <script src="../js/script.js"></script>
+<script>
+    $(document).ready(function(){
+        // 링크복사
+        $('.btn-copy').click(function(){
+            var urlbox = document.getElementById('share-text');
+            urlbox.select();
+            document.execCommand('Copy');
+            // alert( 'URL 이 복사 되었습니다.');
+        });
+        // 뷱마크 클릭
+        $('.bookmark').click(function(){
+            var wishImg = $(this).find('img');
+            wishImg.attr("src",function(index, attr){
+                if(attr.match('_off')){
+                    return attr.replace('_off','_on');
+                }else{
+                    return attr.replace('_on','_off');
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

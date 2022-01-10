@@ -14,17 +14,36 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1025px)" href="../css/pc.css" >
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/booPtstrap.min.js"></script>
 </head>
 <body>
 <div class="wrap">
-    <!-- 공용 팝업 -->
-    <div class="modal public" style="display: none;">
+
+    <!-- 공유 팝업 -->
+    <div class="modal mo-share">
         <div class="mo-dim"></div>
         <div class="modal-body">
             <div class="contentBox">
-                <p class="pop-text">텍스트 영역입니다</p>
-                <button type="button" class="btn btn-confi">확인</button>
+                <button class="share-close"><span class="material-icons-outlined">close</span></button>
+                <h4 class="share-title">공유하기</h4>
+                <ul class="shareIcon">
+                    <!-- <li> 
+                        <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_naver.png" alt="네이버 블로그"></a></div>
+                        <span>네이버 블로그</span>
+                    </li>-->
+                    <li>
+                        <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_facebook.png" alt="페이스북"></a></div>
+                        <span>페이스북</span>
+                    </li>
+                    <li>
+                        <div><a href=""><img src="http://img.assesta.com/AssestaExam/mbtifront/img_share_kakao.png" alt="카카오톡"></a></div>
+                        <span>카카오톡</span>
+                    </li>
+                </ul>
+                <div class="share-link">
+                    <input type="text" class="int" id="share-text" value="www.saram.career4u.net">
+                    <button type="button" class="btn btn-copy">복사</button>
+                </div>
             </div>
         </div>
     </div>
@@ -76,7 +95,7 @@
                             <a href="#">Service</a>
                             <ul class="smallMenu">
                                 <li><a href="#">자기의 발견 1</a></li>
-                                <li><a href="#">자기의 발견 2</a></li>
+                                <!-- <li><a href="#">자기의 발견 2</a></li> -->
                             </ul>
                         </li>
                         <li>
@@ -84,6 +103,7 @@
                             <ul class="smallMenu">
                                 <li><a href="#">연구자료</a></li>
                                 <li><a href="#">영상모음. ZIP</a></li>
+                                <li><a href="#">MBTI FAQ</a></li>
                             </ul>
                         </li>
                         <li>
@@ -101,40 +121,49 @@
         </div>
     
     </header>
+
     <!-- content -->
-    <section class="title-Section qna-title">
-        <div class="container" style="background: none;">
+    <section class="title-Section post-title">
+        <div class="container">
             <div class="title-Area">
-                <h2>Q&A</h2>
+                <h2>MBTI FAQ </h2>
+            </div>
+        </div>
+    </section>
+    <section class="post-01 faq-post">
+        <div class="container">
+            <h4>기질지표는 무엇인가요?</h4>
+            <div class="post-head">
+                <p>2021.00.00 <strong>View</strong><span>1,214</span></p>
+                <div>
+                    <!-- <button class="bookmark"><img src="http://img.assesta.com/AssestaExam/mbtifront/img_bookmark_off.png" alt="북마크off 아이콘"></button> -->
+                    <button class="share"><img src="http://img.assesta.com/AssestaExam/mbtifront/share.png" alt="공유 아이콘"></button>
+                </div>
+            </div>
+            <div class="post-area">
+                <div class="post-summary faq-summary">
+                    <p>거선의 기관과 같이 힘있다 이것이다 인류의 역사를 꾸며 내려온 동력은 바로 이것이다 이성은 투명하되 얼음과 같으며 지혜는 날카로우나 갑 속에 든 칼이다 청춘의 끓는 피가 아니더면 인간이 얼마나 쓸쓸하랴?거선의 기관과 같이 힘있다 이것이다 인류의 역사를 꾸며 내려온 동력은 바로 이것이다 이성은 투명하되 얼음과 같으며 지혜는 날카로우나 갑 속에 든 칼이다 청춘의 끓는 피가 아니더면 인간이 얼마나 쓸쓸하랴?
+                    </p>
+                </div>
+                <p>※ 해당 자료의 전문을 받아보고 싶다면 다운로드 하세요.</p>
+                <button class="btn">다운로드</button>
+            </div>
+            <div class="PN-post">
+                <div class="post-area">
+                    <div>
+                        <a href="" class="prev-post"><span>< 이전글</span><span>OOOOOOO이 뭔지 궁금해요!</span></a>
+                    </div>
+                    <div>
+                        <a href="" class="next-post"><span>> 다음글</span><span>OOOOOOO이 뭔지 궁금해궁금해요!</span></a>
+                    </div>
+                </div>
+                <div class="btn-area">
+                    <a href="FAQ.html" class="btn btn-link">목록</a>
+                </div>
             </div>
         </div>
     </section>
     
-        <section>
-            <div class="ask-content">
-                <div>
-                    <h2>문의하기</h2>
-                    <div class="ask-01">
-                        <h4>문의 유형</h4>
-                        <div class="askType-area">
-                            <ul>
-                                <li class="ask-type type-goods active">검사<i></i></li><li class="ask-type type-payment">결제<i></i></li><li class="ask-type type-refund">환불<i></i></li><li class="ask-type type-etc">기타</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="ask-02">
-                        <h4>문의 내용</h4>
-                        <div class="ask-textBox">
-                            <textarea class="A-textBox" placeholder="문의 내용을 입력해주세요.&#10;주문 번호를 적어주시면 더 빠른 답변이 가능합니다."></textarea>
-                        </div>
-                        <!-- <p>문의내용에 대한 답변은 '마이페이지 > 마이메뉴 > 내 게시물 관리'에서 쉽게 확인하실 수 있습니다.</p> -->
-                        <button type="submit" class="btn btn-send">문의하기</button>
-                        <!-- 수정버튼 -->
-                        <button type="submit" class="btn btn-send" style="display:none">수정하기</button>
-                    </div>
-                </div>
-            </div>
-        </section>
     <!-- footer -->
     <footer>
         <div class="container">
@@ -159,18 +188,59 @@
             </div>
             <p>
                 <span class="m-br">서울시 영등포구 국회대로 68길 11, 삼보호정빌딩 5,6층</span>
-                <span class="m-br pc-br">TEL 02)787-1400(평일 9am-6pm) FAX 02)787-1408</span>
+                <span class="m-br pc-br">TEL 02)787-1411(평일 9am-6pm) FAX 02)787-1408</span>
                 <span class="m-br pc-br">Email assesta@assesta.com</span>
             </p>
             <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>
         </div>
     </footer>
-    
-
-
 </div>
 
 <script src="../js/script.js"></script>
+<script>
+    $(document).ready(function(){
+        // 공유하기 클릭
+        $('.share').on('click',function(){
+            $('body').addClass('show');
+            $('.mo-share').fadeIn(250);
+        });
+        // 링크 복사
+        $('.btn-copy').click(function(){
+            var urlbox = document.getElementById('share-text');
+            urlbox.select();
+            document.execCommand('Copy');
+            // alert( 'URL 이 복사 되었습니다.');
+        });
+        // 뷱마크 클릭
+        $('.bookmark').click(function(){
+            var wishImg = $(this).find('img');
+            wishImg.attr("src",function(index, attr){
+                if(attr.match('_off')){
+                    return attr.replace('_off','_on');
+                }else{
+                    return attr.replace('_on','_off');
+                }
+            });
+        });
+        // 유형별 분포
+        let type = $('.type-val');
+        type.each(function(){
+            let typeItem = $(this);
+            let typeCurr =  typeItem.find('span');
+            let typeData = typeCurr.attr('data-rate');
+            $({rate:0}).delay(1600).animate({rate:typeData},{
+                duration:1000,
+                progress:function(){
+                    let numFix = this.rate;
+                    let now = numFix.toFixed(1);
+                    typeCurr.text(now + '%');
+                }
+            });
+        });
+
+
+    });
+</script>
 
 </body>
 </html>
