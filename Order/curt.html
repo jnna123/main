@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBTI 사람의 발견</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../css/reset.css" >
     <link rel="stylesheet" type="text/css" href="../css/common.css" >
 
@@ -36,15 +35,15 @@
                 </div>
                 <div class="logo"><div><img src="http://img.assesta.com/AssestaExam/mbtifront/logo.gif" alt="사람의발견 로고"></div></div>
                 <!-- 로그인 전 버튼 -->
-                <div class="test"><button type="button" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
+                <div class="test"><button type="button" onclick="location.href='login.html';" class="btn">LOGIN <span>▶</span></button></div>
                 <!-- 로그인 후 버튼 -->
-                <!-- <div class="goMy"><button type="button" class="btn-my"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_mygo.png" alt="사람 아이콘"></button></div> -->
+                <div class="test" style="display: none;"><button type="button" onclick="location.href='mypage.html';" class="btn"><img src="http://img.assesta.com/AssestaExam/mbtifront/header_btn.png" alt="사람 아이콘">MY <span>▶</span></button></div>
 
             </nav>
         </div>
         <div class="dim-area">
             <div class="sideBox">
-                <button type="button" class="btn-close"><span></span></button>
+                <button type="button" class=" btn-close menu-close"><span></span></button>
                 <div class="sidebar">
                     <!-- 로그인 전 상태 -->
                     <div class="side-user userLogout" style="display: none;">
@@ -68,7 +67,7 @@
                             <a href="#">Service</a>
                             <ul class="smallMenu">
                                 <li><a href="#">자기의 발견 1</a></li>
-                                <li><a href="#">자기의 발견 2</a></li>
+                                <!-- <li><a href="#">자기의 발견 2</a></li> -->
                             </ul>
                         </li>
                         <li>
@@ -94,12 +93,11 @@
     
     </header>
     <!-- content -->
-    <section class="serviceTitle">
+    <section class="title-Section curtTitle">
         <div class="container">
-            <div class="service-titleBox curtTitle">
+            <div class="title-Area title-Area-img">
                 <h2>CART<span class="c-tootip"><span class="material-icons-outlined">error_outline</span></span><span class="tooltiptext">CART 담기 상품은 최대 30일간 저장됩니다.<br>상품정보 변경시 주문이 불가할 수 있습니다.</span></h2>
-
-                <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img__login_01.png" alt="자전거"></div>
+                <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img__login_01.png" alt="움직이는 자전거 이미지"></div>
             </div>
         </div>
     </section>
@@ -110,14 +108,14 @@
                     <ul>
                         <li class="curt-list allCheck">
                             <div>
-                                <input  type="checkbox" name="" id="all-curtcheck" class="check curt-check">
+                                <input  type="checkbox" id="all-curtcheck" class="check curt-check">
                                 <label for="all-curtcheck">전체 선택</label>
                             </div>
                             <button type="button" class="delete-Btn">선택 상품 삭제</button>
                         </li>
                         <li class="curt-list">
                             <div class="item-select">
-                                <input  type="checkbox" name="" id="curt01" class="check curt-check">
+                                <input  type="checkbox" id="curt01" class="check curt-check">
                                 <label for="curt01"></label>
                                 <span class="material-icons-outlined listRemove">close</span>
                                 <div class="item-group">
@@ -157,7 +155,7 @@
                         </li>
                         <li class="curt-list">
                             <div class="item-select">
-                                <input  type="checkbox" name="" id="curt02" class="check curt-check">
+                                <input  type="checkbox" id="curt02" class="check curt-check">
                                 <label for="curt02"></label>
                                 <span class="material-icons-outlined listRemove">close</span>
                                 <div class="item-group">
@@ -248,7 +246,7 @@
             </div>
             <p>
                 <span class="m-br">서울시 영등포구 국회대로 68길 11, 삼보호정빌딩 5,6층</span>
-                <span class="m-br pc-br">TEL 02)787-1400(평일 9am-6pm) FAX 02)787-1408</span>
+                <span class="m-br pc-br">TEL 02)787-1411(평일 9am-6pm) FAX 02)787-1408</span>
                 <span class="m-br pc-br">Email assesta@assesta.com</span>
             </p>
             <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>

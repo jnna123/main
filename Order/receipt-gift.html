@@ -19,8 +19,6 @@
 <body>
 <div class="wrap">
 
-
-        
     <!-- 헤더 -->
     <header id="gnbNav">
         <div class="container">
@@ -94,73 +92,80 @@
     </header>
 
     <!-- content -->
-    <section class="rc-title">
-        <div class="closeBox"><button><img src="http://img.assesta.com/AssestaExam/mbtifront/close_w.png" alt="엑스 이미지"></button></div>
-        <div class="container container_pc">
-            <div class="rc-titleBox">
-                <!-- 카카오 선물일때 -->
-                <h2><span>홍길동</span> 고객님.<br>선물이 결제되어 받는 분께<br>카카오톡 메시지를 발송했습니다.</h2>
-                <!-- SMS 선물일때 -->
-                <h2 style="display: none;"><span>홍길동</span> 고객님.<br>선물이 결제되어 받는 분께<br>SMS를 발송했습니다.</h2>
-                <div>
-                    <span>자기의 발견 1</span>
-                    <span>2021.00.00 주문하신 주문번호는 000000입니다.</span>
+    <div class="wrapp rc-wrap">
+        <section class="rc-title rcGift-title">
+            <div class="closeBox"><button><span class="material-icons-outlined">close</span></button></div>
+            <div class="container container_pc">
+                <div class="rc-titleBox">
+                    <!-- 카카오 선물일때  -->
+                    <h2><span>홍길동</span> 고객님.<br>선물이 결제되어 받는 분께<br>카카오톡 메시지를 발송했습니다.</h2>
+                    <!-- SMS 선물일때 -->
+                    <h2 style="display: none;"><span>홍길동</span> 고객님.<br>선물이 결제되어 받는 분께<br>SMS를 발송했습니다.</h2>
+                    <div>
+                        <span>자기의 발견 1</span>
+                        <span>2021.00.00 주문하신 주문번호는 000000입니다.</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="rc-contents">
-        <div class="container container_pc">
-            <div class="content content-1">
-                <h3>결제 정보</h3>
-                <table>
-                    <tr class="item01">
-                        <td>상품 금액</td>
-                        <td>25,000원</td>
-                    </tr>
+        </section>
+        <section class="rc-contents rcGift-contents">
+            <div class="container container_pc">
+                <div class="content content-1">
+                    <h3>결제 정보</h3>
+                    <table>
+                        <tr class="item01">
+                            <td>상품 금액</td>
+                            <td>25,000원</td>
+                        </tr>
 
-                    <tr class="item item03">
-                        <td>쿠폰 사용</td>
-                        <td>0원</td>
-                    </tr>
+                        <tr class="item item03">
+                            <td>쿠폰 사용</td>
+                            <td>(-)0원</td>
+                        </tr>
+                        <!-- 휴대폰 결제 했을 때만 -->
+                        <tr class="item item03">
+                            <td>수수료</td>
+                            <td>(+)0원</td>
+                        </tr>
+                        <tr class="item08">
+                            <td>결제 방법</td>
+                            <td>네이버페이</td>
+                        </tr>
+                        <tr class="item09">
+                            <td>주문자</td>
+                            <td>홍길동</td>
+                        </tr>
+                        <tr class="item10">
+                            <td>연락처</td>
+                            <td>010-00000-0000</td>
+                        </tr>
+                        <tr class="item11">
+                            <td>이메일</td>
+                            <td>000@000.000</td>
+                        </tr>
+                        <tr class="item12">
+                            <td>최종 결제 금액</td>
+                            <td>110,000원</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="content content-2">
+                    <h3>선물 받는 고객 정보</h3>
+                    <table>
+                        <tr>
+                            <td>이름</td>
+                            <td>홍길동</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="rc-Btn rcGift-btn">
+                    <a href="#" class="btn">카카오톡 다시 보내기</a>
+                    <a href="payment-detail.html" class="btn">결제 내역 보러가기</a>
+                </div>
+            </div>
+        </section>
+    </div>
 
-                    <tr class="item08">
-                        <td>결제 방법</td>
-                        <td>네이버페이</td>
-                    </tr>
-                    <tr class="item09">
-                        <td>주문자</td>
-                        <td>홍길동</td>
-                    </tr>
-                    <tr class="item10">
-                        <td>연락처</td>
-                        <td>010-00000-0000</td>
-                    </tr>
-                    <tr class="item11">
-                        <td>이메일</td>
-                        <td>000@000.000</td>
-                    </tr>
-                    <tr class="item12">
-                        <td>최종 결제 금액</td>
-                        <td>110,000원</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="content content-2">
-                <h3>선물 받는 고객 정보</h3>
-                <table>
-                    <tr>
-                        <td>이름</td>
-                        <td>홍길동</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="rc-Btn">
-                <a href="#">카카오톡 다시 보내기</a>
-                <a href="#">결제 내역 보러가기</a>
-            </div>
-        </div>
-    </section>
         <!-- footer -->
     <footer>
         <div class="container">
@@ -186,7 +191,7 @@
                 </div>
                 <p>
                     <span class="m-br">서울시 영등포구 국회대로 68길 11, 삼보호정빌딩 5,6층</span>
-                    <span class="m-br pc-br">TEL 02)787-1400(평일 9am-6pm) FAX 02)787-1408</span>
+                    <span class="m-br pc-br">TEL 02)787-1411(평일 9am-6pm) FAX 02)787-1408</span>
                     <span class="m-br pc-br">Email assesta@assesta.com</span>
                 </p>
                 <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>
