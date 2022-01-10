@@ -2085,8 +2085,7 @@ background: linear-gradient(45deg, #666, #797979);
   padding: 20px;
 }
 .about-area h2 {
-  margin: 32px 0;
-  font-size: 30px;
+  margin-bottom: 32px;
   color: #4c64fb;
   font-size: 40px;
   font-family: WandohopeB;
@@ -2096,12 +2095,11 @@ background: linear-gradient(45deg, #666, #797979);
   color: #555;
   line-height: 22px;
   font-size: 14px;
-  margin-bottom: 32px;
 }
 .about-area p strong{
   font-family: "Handon3gyeopsal600g";
 }
-.aboutImg {
+/* .aboutImg {
   width: 100%;
   height: 224px;
   position: relative;
@@ -2113,18 +2111,19 @@ background: linear-gradient(45deg, #666, #797979);
   height: 100%;
   border-radius: 10px;
 }
-.aboutImg div {
+/* .aboutImg div {
   background-image: url("http://img.assesta.com/AssestaExam/mbtifront/img_about_04.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   position: relative;
-}
-.aboutImg div > span {
+} */
+/* .aboutImg div > span {
   display: inline-block;
   position: absolute;
-}
+} */
+/*
 .aboutImg div > span:nth-of-type(1) {
 
   width: 140px;
@@ -2153,7 +2152,7 @@ background: linear-gradient(45deg, #666, #797979);
   color: #555;
   line-height: 22px;
   font-size: 14px;
-}
+} */
 
 .about-area .lastText {
   margin-bottom: 0;
@@ -2166,7 +2165,7 @@ background: linear-gradient(45deg, #666, #797979);
   border-bottom: 1px dashed #999;
   margin-bottom: 24px;
 }
-.aboutText-02 .container > div{
+/* .aboutText-02 .container > div{
   padding: 0;
 }
 .aboutText-02 .aboutImg{
@@ -2185,7 +2184,7 @@ background: linear-gradient(45deg, #666, #797979);
 }
 .aboutText-02 h2{
   margin-top: 0;
-}
+} */
 .aboutText-03 .about-title{
   display: flex;
   align-items: flex-end;
@@ -2257,22 +2256,13 @@ left: 0;
   from{transform: translateX(100px) scaleX(-1);}
   to{transform: translateX(0) scaleX(-1);}
 }
-.upBG{
-  opacity: 0;
-  transform: translateY(80px);
-}
-.upBG.show {
-  transform: translateY(0);
-  transition-delay: 0.5s;
-  transition: transform 0.7s, opacity 1s;
-}
 .tyPing.show{
   height: 42px;
   display: none;
 }
 
 /* about 소개 애니메이션 */
-.aboutImg div.show {
+/* .aboutImg div.show {
   opacity: 0;
   -webkit-animation-name: show-op;
   -webkit-animation-duration: 0.3s;
@@ -2347,7 +2337,7 @@ left: 0;
     opacity: 1;
     transform: translateY(0px);
   }
-}
+} */
 
 .a-txtAni.show .text-02Ani{
   opacity: 0;
@@ -2358,7 +2348,6 @@ left: 0;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-
 @keyframes about-bicy{
   0%{
   opacity: 0;
@@ -2434,9 +2423,100 @@ left: 0;
 }
 
 
+/* about 소개페이지 - 새구조.......*/
+.about-area p{
+  padding-bottom: 32px;
+  margin-bottom: 0;
+}
+.about-New01 > .container > div:first-of-type{
+  background-image: url('http://img.assesta.com/AssestaExam/mbtifront/img_about_bg01.jpg');
+  background-size: contain;
+}
+.about-New01 .aboutImg > div{
+  background-image: url('http://img.assesta.com/AssestaExam/mbtifront/img_about_bg03.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100%;
+  height: 275px;
+  position: relative;
+}
+.about-New01 .aboutImg > div > div{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 15px;
+}
+.about-New01 .aboutImg > div > div span{
+  position: absolute;
+}
+.about-New01 .aboutImg > div > div span:nth-of-type(1) {
+  width: 190px;
+  left: 50px;
+}
+.about-New01 .aboutImg > div > div span:nth-of-type(2) {
+  width: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about-New01 .aboutImg > div > div span:nth-of-type(3) {
+  width: 150px;
+  right: -110px;
+}
+/* about 소개페이지 - 새구조....... ani*/
+.about-New01 .aboutImg > div > div span{
+  animation: about-up 0.3s forwards;
+  opacity: 0;
+}
+.about-New01 .aboutImg > div > div span:nth-of-type(1){
+  animation-delay: 0.4s;
+}
+.about-New01 .aboutImg > div > div span:nth-of-type(2){
+  animation-delay: 0.7s;
+}
+.about-New01 .aboutImg > div > div span:nth-of-type(3){
+  animation-delay: 1s;
+}
+.about-New01 .container > div p:first-of-type, .about-New02 .aboutImg.show > div{
+  animation: about-upText 0.3s forwards;
+  opacity: 0;
+}
+.about-New02 .aboutImg.show > div{
+  animation-duration: 0.4;
+}
+@keyframes about-up{
+  from{opacity: 0;transform: translateY(30px) translateX(-50%);}
+  to{opacity: 1;transform: translateY(0) translateX(-50%);}
+}
+@keyframes about-upText{
+  from{opacity: 0;transform: translateY(50px);}
+  to{opacity: 1;transform: translateY(0);}
+}
+.about-New02 .container > div{
+  padding: 0;
+}
+.about-New02 .container > div.line{
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+.about-New02 .aboutImg{
+  overflow: hidden;
+}
+.about-New02 .aboutImg > div{
+  background-image: url('http://img.assesta.com/AssestaExam/mbtifront/img_about_bg02.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 312px;
+  opacity: 0;
+}
+.about-New02 h2{
+  margin-top: 0;
+}
+
 
 /* 서비스 페이지 - 메인*/
-
 .service .container {
   background-color: #f2f3f7;
   border-radius: 20px 20px 0 0;
@@ -6872,24 +6952,18 @@ margin-bottom: 8px;
 }
 @media (min-width: 400px){
   /* about 소개  */
-  .aboutImg{
-    margin-top: 55px;
+  .about-New01 .aboutImg > div{
+    max-width: 370px;
+    margin: 0 auto;
   }
-  .aboutText-02 .aboutImg{
-    height: 360px;
+  .about-New01 .aboutImg > div > div{
+    margin-top: 30px;
   }
 }
 @media (min-width: 460px){
   /* 타이틀 */
   .title-Tem .title-Area .title-bg{
     margin-top: 110px;
-  }
-  /* about 소개페이지 */
-  .aboutImg {
-    margin-top: 105px;
-  }
-  .aboutText-02 .aboutImg {
-    height: 460px;
   }
   /* 로그인 */
   .loginTitle .title-Area .title-bg{

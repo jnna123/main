@@ -23,9 +23,9 @@
     <div class="loadbox" style="display: none;">
         <div class="loading">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 30" xml:space="preserve">
-                <rect x="0" y="13" class="rect1"></rect>
-                <rect x="10" y="13" class="rect2"></rect>
-                <rect x="20" y="13" class="rect3"></rect>
+                <rect x="0" y="13" width="4" height="5" class="rect1"></rect>
+                <rect x="10" y="13" width="4" height="5" class="rect2"></rect>
+                <rect x="20" y="13" width="4" height="5" class="rect3"></rect>
             </svg>
         </div>
     </div>
@@ -119,14 +119,18 @@
     </header>
 
     <!-- content -->
-    <section class="E-title">
+    <section class="title-Tem E-title">
         <div class="container">
-            <div class="find-titleBox">
-                <div>
+            <div class="title-Area">
+                <div class="title-txt">
                     <h2>이메일 찾기</h2>
                     <p>휴대폰 번호 인증을 진행해주세요.</p>
                 </div>
-                <div class="b-imgbox" style="animation: none;"><img src="http://img.assesta.com/AssestaExam/mbtifront/img__login_02.png" alt="자전거"></div>
+                <div class="title-bg">
+                    <div>
+                        <div><img src="http://img.assesta.com/AssestaExam/mbtifront/img__login_02.png" alt="자전거"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -136,7 +140,7 @@
                 <div class="int_area int01">
                     <h4>휴대폰 번호</h4>
                     <div class="sendbox">
-                        <input type="text" class="int int-num" placeholder="휴대폰 번호" maxlength="11" onkeydown="onlyNumber()" maxlength="11">
+                        <input type="text" class="int int-num" placeholder="휴대폰 번호" maxlength="11" onkeydown="onlyNumber()">
                         <button type="button" class="btn btn-send">인증 요청</button>
                     </div>
                     <p class="sendboxtext">휴대폰 번호로 인증 번호가 발송되었습니다.</p>
@@ -182,7 +186,7 @@
             </div>
             <p>
                 <span class="m-br">서울시 영등포구 국회대로 68길 11, 삼보호정빌딩 5,6층</span>
-                <span class="m-br pc-br">TEL 02)787-1400(평일 9am-6pm) FAX 02)787-1408</span>
+                <span class="m-br pc-br">TEL 02)787-1411(평일 9am-6pm) FAX 02)787-1408</span>
                 <span class="m-br pc-br">Email assesta@assesta.com</span>
             </p>
             <p>copyright(c) 2021 ASSESTA All Rights Reserved</p>
