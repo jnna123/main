@@ -10,6 +10,7 @@ $(document).ready(function(){
     emailSelect();
     searchEvt();
     selectCash();
+    pageBtn();
 });
 
 function headerScroll(){
@@ -25,17 +26,25 @@ function headerScroll(){
         }
     });
 }
-
+// 페이징
+function pageBtn(){
+    $('.pagination ol > li span').click(function(){
+        $('.pageNum').removeClass('active');
+        $(this).addClass('active');
+    });
+}
 //  클릭 이벤트
 function clickBtn(){
     // 팝업 클릭(닫기)
     $('.btn-confi').on('click',function(){
         $('body').removeClass('show');
+        // $('body').css({ 'overflow': 'hidden'});
         $('.modal').fadeOut(250);
     });
     // 공유,다운로드 (닫기)
     $('.share-close, .mo-dim, .btn-cancel').on('click',function(){
         $('body').removeClass('show');
+        // $('body').css({'overflow':'auto'});
         $('.modal').fadeOut(250);
     });
     // 사이드바
@@ -49,12 +58,6 @@ function clickBtn(){
         $('.menu ').removeClass('show');
         $('html,body,.wrap').removeClass('show');
     });
-    // 이용약관 팝업 닫기
-    $('.policy-close').click(function(){
-        $('.policy').fadeOut(250);
-        $('html,body,.wrap').removeClass('show');
-    });
-
     // 리뷰 더보기 / 접기
     $('.more').click(function(){
         if($(this).hasClass('show')){
@@ -71,7 +74,13 @@ function clickBtn(){
     });
     // 상세 더보기 클릭
     $('.btn-more').click(function(){
-        $('.mbti-text > p').toggleClass('show');
+        $('.detail-content').toggleClass('show');
+        $(this).toggleClass('show');
+        if($(this).hasClass('show')){
+            $(this).html('상세 정보 접기');
+        }else{
+            $(this).html('상세 정보 펼쳐보기');
+        }
     });
     // 위시 버튼
     $('.btn-wish').click(function(){
@@ -112,8 +121,12 @@ function clickBtn(){
         $('body').removeClass('show');
         $('.modal').fadeOut(250);
     });
+    // 이용약관 팝업 닫기
+    $('.policy-close').click(function(){
+        $('.policy').fadeOut(250);
+        $('html,body,.wrap').removeClass('show');
+    });
 }
-
 
 // 이메일 선택
 function emailSelect(){
@@ -134,7 +147,6 @@ function emailSelect(){
         $('.emial-input').removeClass('active');
     });
 }
-
 
 // 이용약관 클릭
 function policyPop(modalname) {
@@ -163,7 +175,6 @@ function allCheck(){
             $('#all-check').prop('checked',false);
         }
     });
-
     // 전체(sns회원가입)
     $('#all-SNScheck').click(function(){
         if($('#all-SNScheck').prop('checked')){
@@ -197,22 +208,22 @@ function allCheck(){
             $('#all-Purcheck').prop('checked',false);
         }
     });
-            // 전체
-            $('#all-mycheck').click(function(){
-                if($('#all-mycheck').prop('checked')){
-                    $('.my-check').prop('checked', true);
-                }else{
-                    $('.my-check').prop('checked', false);
-                }
-            });
-            // 체크하나 풀었을때
-            $('.my-check').click(function(){
-                if($('input[name=myinfo-agree]:checked').length == 2){
-                    $('#all-mycheck').prop('checked',true);
-                }else{
-                    $('#all-mycheck').prop('checked',false);
-                }
-            });
+    // 내 정보 수정 전체
+    $('#all-mycheck').click(function(){
+        if($('#all-mycheck').prop('checked')){
+            $('.my-check').prop('checked', true);
+        }else{
+            $('.my-check').prop('checked', false);
+        }
+    });
+    // 체크하나 풀었을때
+    $('.my-check').click(function(){
+        if($('input[name=myinfo-agree]:checked').length == 2){
+            $('#all-mycheck').prop('checked',true);
+        }else{
+            $('#all-mycheck').prop('checked',false);
+        }
+    });
 }
 
 // 쿠폰클릭
@@ -341,33 +352,6 @@ function onlyNumber() { // 숫자만 입력받는 함수
         event.preventDefault();
     }
 }
-
-
-
-
-// about 스크롤 이벤트
-function scrollHandler(){
-    var winbottom = $(window).scrollTop() + $(window).height();
-    
-    console.log(winbottom)
-
-    $('.upImg').each(function(){
-        var aboutImg = $(this);
-        var imgHalf = aboutImg.offset().top + aboutImg.outerHeight() / 2;
-
-        console.log('포지션 ' + imgHalf)
-
-        if(imgHalf < winbottom) {
-            // play.animate({'opacity':'1'},500);
-            aboutImg.addClass('show');            
-        }
-    });
-}
-
-
-$(window).on('scroll',scrollHandler);
-scrollHandler();
-
 
 
 
