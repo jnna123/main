@@ -634,7 +634,7 @@ footer{
   padding-bottom: 0;
 }
 .about-New01 > .container > div:last-of-type{
-  padding-top: 0;
+  padding: 0 40px;
 }
 .about-New01 .aboutImg > div > div span:nth-of-type(1){
   width: 250px;
@@ -649,12 +649,10 @@ footer{
 }
 .about-New02 .container > div{
   padding: 0;
+  padding-top: 40px;
 }
 .about-New02 .aboutImg{
   margin-top: 0;
-}
-.about-New02 .aboutImg > div{
-  height: 590px;
 }
 .about-New02 .container > div.text-area{
   margin-top: 10px;
@@ -1053,9 +1051,6 @@ section[class*="research-"] > .container{
 }
 @media (min-width: 800px){
   /* about  소개페이지 */
-  .about-New02 .aboutImg > div{
-    height: 650px;
-  }
 }
 @media (min-width: 1024px){
   h2{
@@ -2068,8 +2063,8 @@ section[class*="research-"] > .container{
     border-radius: 20px;
   }
   /* about 소개 */
-  .about-New02 .aboutImg > div{
-    height: 680px;
+  .about-New01 .aboutImg > div > div{
+    margin-top: 20px;
   }
 }/* 갤탭 높이 1300~1400 끝 */
 
@@ -2168,9 +2163,6 @@ section[class*="research-"] > .container{
   /* about 소개 */
   .about-New01 .container > div p:first-of-type{
     padding-bottom: 72px;
-  }
-  .about-New02 .aboutImg > div{
-    height: 790px;
   }
   /* 마이페이지 */
   .mypageTitle .join-titleBox > h2{
